@@ -1,0 +1,43 @@
+<!-- Button trigger modal -->
+<div class="container-fluid p-3 mb-3 col-lg-2 col-md-3">
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#contactModal">
+  <h3 class="font-light m-0">Connect with me <i class="far fa-thumbs-up"></i></h3>
+</button>
+
+<form action="{% url 'contacted' %}" method="post">
+{% csrf_token %}
+<!-- Modal -->
+<div class="modal fade col" id="contactModal" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Contact Form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6 p-2">
+                <input type="text" class="form-control" placeholder="Name" name="name_field" required>
+              </div>
+              <div class="col-sm-6 p-2">
+                <input type="email" class="form-control" placeholder="Email address" name="email_field" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col p-2">
+                <textarea type="text-box" class="form-control" placeholder="Type message here..." name="message_text" required></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button class="fas fa-paper-plane btn btn-primary col-md-3 p-2" input-type="submit"> Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+</div>
