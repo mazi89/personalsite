@@ -31,7 +31,7 @@
 		formElement[i].addEventListener('submit', function(event){
 				event.preventDefault();
 				var request = new XMLHttpRequest();
-				request.open("POST", ('http://abdinasirnoor.com'+ String(this[1].value)), true);
+				request.open("POST", ('https://abdinasirnoor.com'+ String(this[1].value)), true);
 					request.onload = function() {
 						if ((this.status === 200)) {
 							var cart = document.getElementById('cart_count');
