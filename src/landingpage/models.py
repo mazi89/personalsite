@@ -72,7 +72,7 @@ class product(models.Model):
         created_at = models.DateTimeField(auto_now_add=True)
         updated_at = models.DateTimeField(auto_now=True)
         def image_folder_path(instance, self):
-            return os.path.join(instance.product.product_name, instance.product_name + ".jpeg")
+            return os.path.join(instance.product_name, instance.product_name + ".jpeg")
         image = models.ImageField(upload_to=image_folder_path, blank=True)
 
         class Meta:
@@ -102,7 +102,7 @@ class Cart(models.Model):
         timestamp = models.DateTimeField(auto_now_add=True)
         def __str__(self):
             return "sessions id {} has {} items in their cart. Their total is ${}".format(self.pk, self.count, self.total)
-        
+
 class Add_to_cart(models.Model):
         product_foreign = models.ForeignKey(product, related_name='Add_to_cart', on_delete=models.CASCADE)
         cart_foreign = models.ForeignKey(Cart, related_name='Add_to_cart', on_delete=models.CASCADE, default=1)
