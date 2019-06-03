@@ -1,11 +1,13 @@
 from django.shortcuts import render
+from django.conf import settings
 from .models import *
 from .forms import post_form, Post_add_to_cart
-from django.shortcuts import render,HttpResponseRedirect, get_object_or_404
+from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
 from django.contrib import messages
 from django.http import JsonResponse
 from django.db.models import Sum
 import random
+import urllib
 
 def display_html(request):
         query = splash_post.objects.all()
@@ -19,14 +21,34 @@ def display_blog(request):
 
 def contacted(request):
         if request.method == 'POST':
-            form = post_form(request.POST)
-            if form.is_valid():
-                form.save()
-            messages.add_message(request, messages.SUCCESS, 'Message was sent!')
-            return HttpResponseRedirect('/')
+                form = post_form(request.POST)
+                if form.is_valid():
+                   # get the token submitted in the form
+                    recaptcha_response = self.request.POST.get('g-recaptcha-response')
+                    url = 'https://www.google.com/recaptcha/api/siteverify'
+                    payload = {
+                        'secret': settings.RECAPTCHA_SECRET_KEY,
+                        'response': recaptcha_response
+                    }
+                    data = urllib.parse.urlencode(payload).encode()
+                    req = urllib.request.Request(url, data=data)
+
+                    # verify the token submitted with the form is valid
+                    response = urllib.request.urlopen(req)
+                    result = json.loads(response.read().decode())
+
+                    # result will be a dict containing 'success' and 'action'.
+                    # it is important to verify both
+
+                    if (not result['success'] == 'true') or (not result['action'] == 'contactForm'):  # make sure action matches the one from your template
+                        return(JsonResponse({'form_sent':'false', 'botdetected': 'true', 'error_codes': f'result["error-codes"]'}))
+
+                    form.save()
+                    return(JsonResponse({'form_sent':'true', 'botdetected': 'false'}))
         else:
-            form = post_form()
-        return render(request, 'landingpage/contacted.html',{'form':form})
+           return(JsonResponse({'data':'no data posted'}))
+
+
 
 def sitemap(request):
         return HttpResponseRedirect('http://abdinasirnoor.com/static/landingpage/sitemap.xml')

@@ -4,7 +4,7 @@
   <h3 class="font-light m-0">Connect with me <i class="far fa-thumbs-up"></i></h3>
 </button>
 
-<form action="{% url 'contacted' %}" method="post">
+<form id="contactForm" method="post">
 {% csrf_token %}
 <!-- Modal -->
 <div class="modal fade col" id="contactModal" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
