@@ -4,7 +4,7 @@
   <h3 class="font-light m-0">Connect with me <i class="far fa-thumbs-up"></i></h3>
 </button>
 
-<form action="{% url 'contacted' %}" method="post">
+<form id="contactForm" method="post">
 {% csrf_token %}
 <!-- Modal -->
 <div class="modal fade col" id="contactModal" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
@@ -41,3 +41,14 @@
 </div>
 </form>
 </div>
+
+  <!-- JS -->
+  <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+  <script>
+   grecaptcha.ready(function() {
+       grecaptcha.execute('6Le8zKYUAAAAAAg-is726fx3HwSImmNty0d3NWIm', {action: 'contactForm'}).then(function(token) {
+           document.getElementById("contactForm").appendChild(document.CreateElement(`<input type="hidden" name="g-recaptcha-response aria-hidden="true" value=${token}`));
+       });
+   });
+   </script>
+  <script src="{% static "js/index.js" %}" defer=""></script>
