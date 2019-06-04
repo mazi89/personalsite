@@ -7,6 +7,5 @@ install:
   - pip install pipenv shell
   - pipenv install
   # - pip install selenium
-test:
-  post:
+script:
     - python /src/tests/functional_tests.py
