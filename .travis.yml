@@ -1,5 +1,12 @@
 language: python
 
+addons:
+  firefox: stable
+
 install:
   - pip install pipenv shell
   - pipenv install
+  # - pip install selenium
+test:
+  post:
+    - python /src/tests/functional_tests.py
