@@ -19,7 +19,7 @@ class NewVisitorTest(unittest.TestCase):
             self.browser.get('https://abdinasirnoor.com')
             time.sleep(MAX_WAIT)
             get_http_response = self.browser.find_elements_by_tag_name('html')
-            self.AssertTrue(get_http_response)
+            self.assertTrue(get_http_response)
 
         def test_end_of_test(self):
             self.fail('Finished the test!')
