@@ -16,9 +16,10 @@ class NewVisitorTest(unittest.TestCase):
             self.browser = webdriver.Firefox()
 
         def test_browse_to_site(self):
-            self.browser.get('https://abdinasirnoor.com')
+            browser = self.browser
+            browser.get('https://abdinasirnoor.com')
             time.sleep(MAX_WAIT)
-            self.assertIn("Python", driver.title)
+            self.assertIn("Python", browser.title)
 
         def tearDown(self):
             self.browser.quit()
