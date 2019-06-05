@@ -19,7 +19,7 @@ class NewVisitorTest(unittest.TestCase):
             browser = self.browser
             browser.get('https://abdinasirnoor.com')
             time.sleep(MAX_WAIT)
-            self.assertIn("Python", browser.title)
+            self.assertIn("Abdinasir Noor", browser.title)
 
         def tearDown(self):
             self.browser.quit()
