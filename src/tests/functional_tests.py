@@ -18,11 +18,7 @@ class NewVisitorTest(unittest.TestCase):
         def test_browse_to_site(self):
             self.browser.get('https://abdinasirnoor.com')
             time.sleep(MAX_WAIT)
-            get_http_response = self.browser.find_elements_by_tag_name('html')
-            self.assertTrue(get_http_response)
-
-        def test_end_of_test(self):
-            self.fail('Finished the test!')
+            self.assertIn("Python", driver.title)
 
         def tearDown(self):
             self.browser.quit()
