@@ -18,6 +18,7 @@ class NewVisitorTest(unittest.TestCase):
 
         def tearDown(self):
             self.browser.quit()
+            
         def browse_to_site(self):
             self.browser.get('https://abdinasirnoor.com')
             time.sleep(MAX_WAIT)
