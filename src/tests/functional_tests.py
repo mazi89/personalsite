@@ -20,12 +20,12 @@ class NewVisitorTest(unittest.TestCase):
             self.browser.quit()
         def browse_to_site(self):
             self.browser.get('https://abdinasirnoor.com')
-            time.sleep(5)
+            time.sleep(MAX_WAIT)
             get_http_response = self.browser.find_elements_by_tag_name('html')
             self.AssertTrue(get_http_response)
+
         self.fail('Finish the test!')
-#  Django test runner intiates the test therefore
-#  this code to begin app is unecessary. Keeping
-#  this code for historical sake
+
+
 if __name__ == '__main__':
     unittest.main()
