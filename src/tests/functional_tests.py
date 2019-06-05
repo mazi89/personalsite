@@ -23,8 +23,7 @@ class NewVisitorTest(unittest.TestCase):
             time.sleep(MAX_WAIT)
             get_http_response = self.browser.find_elements_by_tag_name('html')
             self.AssertTrue(get_http_response)
-
-        self.fail('Finish the test!')
+            self.fail('Finish the test!')
 
 
 if __name__ == '__main__':
