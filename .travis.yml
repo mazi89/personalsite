@@ -1,5 +1,28 @@
 language: python
 
+addons:
+  firefox: latest
+
+services:
+  - mysql
+
 install:
   - pip install pipenv shell
   - pipenv install
+  - pip install selenium
+  - pip install mysql-connector-python
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+  - mkdir geckodriver
+  - tar -xzf geckodriver-v0.24.0-linux64.tar.gz -C geckodriver
+  - export PATH=$PATH:$PWD/geckodriver
+  # - echo $PATH # keeping for historical debugging
+
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
+  - openssl aes-256-cbc -K $encrypted_2ac12e5e0aa1_key -iv $encrypted_2ac12e5e0aa1_iv -in testRequirementLocal -out src/secrets.json -d
+  - python src/personalsite/db_setup.py
+script:
+  - python src/manage.py test src/landingpage
+  - python src/tests/test_functionals.py

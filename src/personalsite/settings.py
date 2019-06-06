@@ -38,7 +38,7 @@ DEBUG =  get_secret('DEBUG')
 
 RECAPTCHA_SECRET_KEY = get_secret('RECAPTCHA_SECRET_KEY')
 
-ALLOWED_HOSTS =  ['abdinasirnoor.com', '45.79.169.247', '2600:3c03::f03c:91ff:fea7:ab59']
+ALLOWED_HOSTS =  ['abdinasirnoor.com', '45.79.169.247', '2600:3c03::f03c:91ff:fea7:ab59', 'localhost']
 
 
 # Application definition
@@ -137,6 +137,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media_product')
 MEDIA_URL = '/media_product/'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
-
-
-
