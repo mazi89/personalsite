@@ -19,5 +19,6 @@ before_script:
   - sleep 3 # give xvfb some time to start
   - openssl aes-256-cbc -K $encrypted_2ac12e5e0aa1_key -iv $encrypted_2ac12e5e0aa1_iv -in testRequirementLocal -out secr
 ets.json -d
-
-script: python src/tests/functional_tests.py
+script:
+  - python /.manage.py test
+  - python src/tests/functional_tests.py

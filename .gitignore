@@ -7,4 +7,5 @@ src/static/landingpage/pdf/901-notes.pdf
 src/landingpage/migrations
 src/landingpage/__init__.py
 src/personalsite/__init__.py
-
+/secrets.json
+src/static/landingpage/imgs/Logo.png
