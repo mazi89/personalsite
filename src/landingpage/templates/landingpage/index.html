@@ -82,11 +82,19 @@
     <!-- JS -->
   <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
   <script>
-   grecaptcha.ready(function() {
-       grecaptcha.execute('6Le8zKYUAAAAAAg-is726fx3HwSImmNty0d3NWIm', {action: 'contactForm'}).then(function(token) {
-           document.getElementById("contactForm").appendChild(document.CreateElement(`<input type="hidden" name="g-recaptcha-response aria-hidden="true" value=${token}`));
-       });
-   });
+  grecaptcha.ready(function() {
+      grecaptcha.execute('6Le8zKYUAAAAAAg-is726fx3HwSImmNty0d3NWIm', {action: 'contactForm'}).then(function(token) {
+          var input = document.createElement("input");
+
+           input.setAttribute("type", "hidden");
+
+           input.setAttribute("name", "g-recaptcha-response");
+
+           input.setAttribute("value", `${token}`);
+
+           document.getElementById("contactForm").appendChild(input);
+      });
+  });
    </script>
   <script src="{% static "landingpage/js/index.js" %}" defer=""></script>
         </body>
