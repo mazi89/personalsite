@@ -1,7 +1,7 @@
 from django.test import TestCase
 from myapp.models import *
 
-class AnimalTestCase(TestCase):
+class TestCaseContact(TestCase):
     def setUp(self):
         contact_me.objects.create(
         name_field = "abdi",
@@ -12,8 +12,8 @@ class AnimalTestCase(TestCase):
         email_field = "mymail23@mail.com",
         message_text = "words of importance2")
 
-    def test_animals_can_speak(self):
-        """Animals that can speak are correctly identified"""
+    def test_contact_me_modal(self):
+        """Model objects can be indentified"""
         abdi = contact_me.objects.get(name="abdi")
         testDummy = contact_me.objects.get(name="testDummy")
         self.assertTrue(abdi)
