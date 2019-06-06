@@ -17,7 +17,7 @@ def get_secret(setting, secrets=secrets):
 
 mydb = mysql.connector.connect(
   user="root",
-  password=" "
+  password=""
 )
 
 mycursor = mydb.cursor()
