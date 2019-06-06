@@ -8,10 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
 					request.open("POST", 'https://abdinasirnoor.com/contacted', true);
 						request.onload = function() {
 							if ((this.status === 200)) {
-								console.log(this.response);
+							 $("#contactModal").modal('hide'); // remove contactModal
+							 var node = document.createElement("div");
+							 node.classList.add("alert");
+							 node.classList.add("alert-success");
+							 node.textContent = "Message sent successfully!";
+							 $(node).alert();
 							}
 							else {
-								console.log(this.response);
+							 $("#contactModal").modal('hide'); // remove contactModal
+ 							 var node = document.createElement("div");
+ 							 node.classList.add("alert");
+ 							 node.classList.add("alert-danger");
+ 							 node.textContent = "Message sent unsuccessfully! Bot detected. If you're human, please try again later.";
+ 							 $(node).alert(); 
 							};
 						};
 					request.send(new FormData(this));
