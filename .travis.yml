@@ -19,7 +19,7 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
   - openssl aes-256-cbc -K $encrypted_2ac12e5e0aa1_key -iv $encrypted_2ac12e5e0aa1_iv -in testRequirementLocal -out src/secrets.json -d
-
+  - python src/personalsite/db_setup.py
 script:
   - python src/manage.py test src/landingpage
   - python src/tests/test_functionals.py
