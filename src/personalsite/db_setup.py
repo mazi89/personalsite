@@ -23,6 +23,6 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 mycursor.execute('CREATE DATABASE personalsite')
-
-mycursor.excute(f`CREATE USER abdi@localhost IDENTIFIED BY {get_secret('DB_PASSWORD')}; \
+secret_pass = get_secret('DB_PASSWORD')
+mycursor.excute(f`CREATE USER abdi@localhost IDENTIFIED BY {secret_pass}; \
                 GRANT ALL ON personalsite TO abdi@localhost WITH GRANT OPTION;`)
