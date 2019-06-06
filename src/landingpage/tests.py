@@ -1,5 +1,5 @@
 from django.test import TestCase
-from myapp.models import *
+from .models import *
 
 class TestCaseContact(TestCase):
     def setUp(self):
