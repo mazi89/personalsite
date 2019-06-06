@@ -1,4 +1,3 @@
-src/manage.py
 src/secrets.json
 .venv
 src/static/admin
