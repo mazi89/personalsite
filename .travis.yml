@@ -5,12 +5,12 @@ addons:
 
 services:
   - mysql
-  
+
 install:
   - pip install pipenv shell
   - pipenv install
   - pip install selenium
-  - pip install MySQL-python
+  - pip install mysql-connector-python
   - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
   - mkdir geckodriver
   - tar -xzf geckodriver-v0.24.0-linux64.tar.gz -C geckodriver
