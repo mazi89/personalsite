@@ -27,6 +27,6 @@ mycursor.execute('CREATE DATABASE personalsite',)
 secret_pass = get_secret('DB_PASSWORD')
 
 mycursor.execute(f'CREATE USER \'abdi\'@\'localhost\' IDENTIFIED BY \'{secret_pass}\'; \
-                GRANT ALL ON personalsite TO \'abdi\'@\'localhost\' WITH GRANT OPTION;',)
+                GRANT ALL ON *.* TO \'abdi\'@\'localhost\' WITH GRANT OPTION;',)
 
 mycursor.close()
