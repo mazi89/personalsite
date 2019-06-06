@@ -14,7 +14,7 @@ class TestCaseContact(TestCase):
 
     def test_contact_me_modal(self):
         """Model objects can be indentified"""
-        abdi = contact_me.objects.get(name="abdi")
-        testDummy = contact_me.objects.get(name="testDummy")
+        abdi = contact_me.objects.get(name_field="abdi")
+        testDummy = contact_me.objects.get(name_field="testDummy")
         self.assertTrue(abdi)
         self.assertTrue(testDummy)

@@ -15,7 +15,7 @@ install:
   - mkdir geckodriver
   - tar -xzf geckodriver-v0.24.0-linux64.tar.gz -C geckodriver
   - export PATH=$PATH:$PWD/geckodriver
-  - echo $PATH
+  # - echo $PATH # keeping for historical debugging
 
 before_script:
   - "export DISPLAY=:99.0"
