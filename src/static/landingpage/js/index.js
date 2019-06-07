@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					var request = new XMLHttpRequest();
 					request.open("POST", '/contacted/', true);
 						request.onload = function() {
-							var myArr = JSON.parse(this.responseText);
-							if ((this.status === 200) && myArr.toString().includes('form_sent: \"true\"') == true) {
+							if (this.status === 200) {
 							 $("#contactModal").modal('hide'); // remove contactModal
 							 $("#successModal").modal('show'); //success message
 							 $(".btn-default").replaceWith('<p class="h2">Message has been sent <i class="far fa-thumbs-up fa-2x"></i></p>');
