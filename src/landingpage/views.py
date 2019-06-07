@@ -8,6 +8,8 @@ from django.http import JsonResponse
 from django.db.models import Sum
 import random
 import urllib
+import urllib.request
+import json
 
 def display_html(request):
         query = splash_post.objects.all()
@@ -24,7 +26,7 @@ def contacted(request):
                 form = post_form(request.POST)
                 if form.is_valid():
                    # get the token submitted in the form
-                    recaptcha_response = self.request.POST.get('g-recaptcha-response')
+                    recaptcha_response = request.POST.get('g-recaptcha-response')
                     url = 'https://www.google.com/recaptcha/api/siteverify'
                     payload = {
                         'secret': settings.RECAPTCHA_SECRET_KEY,

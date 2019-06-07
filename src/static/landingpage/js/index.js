@@ -5,13 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	form.addEventListener('submit', function(event){
 					event.preventDefault();
 					var request = new XMLHttpRequest();
-					request.open("POST", 'https://abdinasirnoor.com/contacted', true);
+					request.open("POST", 'https://abdinasirnoor.com/contacted/', true);
 						request.onload = function() {
 							if ((this.status === 200)) {
-								console.log(this.response);
+							 $("#contactModal").modal('hide'); // remove contactModal
+							 $("#successModal").modal('show'); //success message
+							 $(".btn-default").replaceWith('<p class="h2">Message has been sent <i class="far fa-thumbs-up fa-2x"></i></p>');
+
 							}
 							else {
-								console.log(this.response);
+							 $("#contactModal").modal('hide'); // remove contactModal
+							$("#successModal").removeClass('alert-success');
+							$("#successModal").addClass('alert-danger');
+							$(".bodyMessage").replaceWith('<p class="h1 bodyMessage"><strong>Message Was not sent!</strong> bot detected. If you\re human please try again later!</p>');
+							$(".btn-default").replaceWith('<p class="h2">Message has was not sent!<i class="far fa-thumbs-down fa-2x"></i></p>');
 							};
 						};
 					request.send(new FormData(this));

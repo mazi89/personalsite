@@ -4,7 +4,7 @@
   <h3 class="font-light m-0">Connect with me <i class="far fa-thumbs-up"></i></h3>
 </button>
 
-<form id="contactForm" method="post">
+<form id="contactForm">
 {% csrf_token %}
 <!-- Modal -->
 <div class="modal fade col" id="contactModal" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
@@ -40,4 +40,18 @@
   </div>
 </div>
 </form>
+</div>
+<div class="modal fade col" id="successModal" role="dialog" aria-label="Success modal">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="container-fluid">
+      <div class="modal-body">
+        <div class="alert alert-success alert-dismissible">
+          <button type="button" class="close btn btn-lg" aria-label="Close">
+          <span aria-hidden="true" class="h1">x</span>
+          </button>
+          <p class="h1 bodyMessage"><strong>Success!</strong> Message was sent!</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
