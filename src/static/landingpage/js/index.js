@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							$("#successModal").removeClass('alert-success');
 							$("#successModal").addClass('alert-danger');
 							$(".bodyMessage").replaceWith('<p class="h1 bodyMessage"><strong>Message Was not sent!</strong> bot detected. If you\re human please try again later!</p>');
-														 $(".btn-default").replaceWith('<p class="h2">Message has was not sent!<div class="far fa-thumbs-down"></p>');
+							$(".btn-default").replaceWith('<p class="h2">Message has was not sent!<i class="far fa-thumbs-down fa-3x"></i></p>');
 							};
 						};
 					request.send(new FormData(this));
