@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						request.onload = function() {
 							if ((this.status === 200)) {
 							 $("#contactModal").modal('hide'); // remove contactModal
-							 var node = document.createElement("div");
-							 node.classList.add("alert");
-							 node.classList.add("alert-success");
-							 node.textContent = "Message sent successfully!";
-							 $(node).alert();
+							 $('body').append(` <div class="alert alert-success alert-dismissible fade" role="alert" id="buttonAlert">
+											          <strong>Success!</strong> Message was sent successfully.
+											          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											            <span aria-hidden="true">&times;</span>
+											          </button>
+											   				</div>`);
+							 $('alert-success').alert();
 							}
 							else {
 							 $("#contactModal").modal('hide'); // remove contactModal
