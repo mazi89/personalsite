@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					var request = new XMLHttpRequest();
 					request.open("POST", 'https://abdinasirnoor.com/contacted/', true);
 						request.onload = function() {
-							if ((this.status === 200 && this.)) {
+							if ((this.status === 200)) {
 							 $("#contactModal").modal('hide'); // remove contactModal
 							 $("#successModal").modal('show'); //success message
 							 $(".btn-default").replaceWith('<p class="h2">Message has been sent <i class="far fa-thumbs-up fa-2x"></i></p>');
