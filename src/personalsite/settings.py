@@ -38,7 +38,7 @@ DEBUG =  get_secret('DEBUG')
 
 RECAPTCHA_SECRET_KEY = get_secret('RECAPTCHA_SECRET_KEY')
 
-ALLOWED_HOSTS =  ['abdinasirnoor.com', '45.79.169.247', '2600:3c03::f03c:91ff:fea7:ab59', 'localhost']
+ALLOWED_HOSTS =  ['abdinasirnoor.com', '45.79.169.247', '2600:3c03::f03c:91ff:fea7:ab59', 'localhost', 'www.abdinasirnoor.com',]
 
 
 # Application definition
