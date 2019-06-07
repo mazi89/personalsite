@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							if ((this.status === 200)) {
 							 $("#contactModal").modal('hide'); // remove contactModal
 							 $("#successModal").modal('show'); //success message
-							 $(".btn-default").replaceWith('<p class="h2">Message has been sent <div class="far fa-thumbs-up"></p>');
+							 $(".btn-default").replaceWith('<p class="h2">Message has been sent <div class="far fa-thumbs-up fa-3x"></p>');
 
 							}
 							else {
