@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.conf import settings
 from .models import *
 from .forms import post_form, Post_add_to_cart
-from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
+from django.shortcuts import render, HttpResponseRedirect, get_object_or_404,
+from django.http import HttpResponse
 from django.contrib import messages
 from django.http import JsonResponse
 from django.db.models import Sum
@@ -45,8 +46,8 @@ def contacted(request):
                         errorCodes = result['error_codes']
                     else:
                         errorCodes = 'None'
-                    # if (not result['success'] == 'true') or (not result['action'] == 'contactForm') or (not (result['score'] <= '0.4')):  # make sure action matches the one from your template
-                    #     return(JsonResponse({'form_sent':'false', 'botdetected': 'true', 'error_codes': f'{errorCodes}',}))
+                    if (result['success'] == 'false') or (not result['action'] == 'contactForm') or (result['score'] <= '0.5'):  # make sure action matches the one from your template
+                        return(JsonResponse({'form_sent':'false', 'botdetected': 'true', 'error_codes': f'{errorCodes}',}), HttpResponse(status=401))
 
                     form.save()
                     return(JsonResponse({'form_sent':'true', 'botdetected': 'false'}))
