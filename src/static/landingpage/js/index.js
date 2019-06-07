@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	form.addEventListener('submit', function(event){
 					event.preventDefault();
 					var request = new XMLHttpRequest();
-					request.open("POST", 'https://abdinasirnoor.com/contacted/', true);
+					request.open("POST", 'https://abdinasirnoor.com/contacted/', false);
 						request.onload = function() {
 							if ((this.status === 200)) {
 							 $("#contactModal").modal('hide'); // remove contactModal
