@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 							else {
 							 $("#contactModal").modal('hide'); // remove contactModal
 							$("#successModal").removeClass('alert-success');
-							$(".alert").addClass('alert-danger');
-							$(".bodyMessage").replaceWith('<p class="h1 bodyMessage"><strong>Message Was not sent!</strong> bot detected. If you\re human please try again later!</p>');
+							$(".alert-success").addClass('alert-danger');
+							$(".bodyMessage").replaceWith('<p class="h1 bodyMessage"><strong>Message Was not sent!</strong> bot detected. If you\'re human please try again later!</p>');
 							$(".btn-default").replaceWith('<p class="h2">Message was not sent!<i class="far fa-thumbs-down fa-2x"></i></p>');
 							$("#successModal").modal('show');
 							console.log(myArr);
