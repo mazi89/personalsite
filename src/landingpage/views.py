@@ -45,7 +45,7 @@ def contacted(request):
                         errorCodes = result['error_codes']
                     else:
                         errorCodes = 'None'
-                    if (not result['success'] == 'true') or (not result['action'] == 'contactForm') or (not result['score'] <= '0.49'):  # make sure action matches the one from your template
+                    if (not result['success'] == 'true') or (not result['action'] == 'contactForm') or (not (result['score'] <= '0.4')):  # make sure action matches the one from your template
                         return(JsonResponse({'form_sent':'false', 'botdetected': 'true', 'error_codes': f'{errorCodes}',}))
 
                     form.save()
