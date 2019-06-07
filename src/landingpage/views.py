@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 from .models import *
 from .forms import post_form, Post_add_to_cart
-from django.shortcuts import render, HttpResponseRedirect, get_object_or_404,
+from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
 from django.http import HttpResponse
 from django.contrib import messages
 from django.http import JsonResponse
