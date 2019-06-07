@@ -42,9 +42,9 @@ def contacted(request):
                     # result will be a dict containing 'success' and 'action'.
                     # it is important to verify both
 
-                    if (not result['success'] == 'true') or (not result['action'] == 'contactForm') or (result['score'] <= '0.49'):  # make sure action matches the one from your template
+                    if (not result['success'] == 'true') or (not result['action'] == 'contactForm') or (not result['score'] <= '0.49'):  # make sure action matches the one from your template
                         return(JsonResponse({'form_sent':'false', 'botdetected': 'true', 'error_codes': f'result["error-codes"]'}))
-                    
+
                     form.save()
                     return(JsonResponse({'form_sent':'true', 'botdetected': 'false'}))
         else:
