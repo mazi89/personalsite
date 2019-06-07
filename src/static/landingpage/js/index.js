@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	form.addEventListener('submit', function(event){
 					event.preventDefault();
 					var request = new XMLHttpRequest();
-					request.open("POST", 'abdinasirnoor.com/contacted/', true);
+					request.open("POST", '/contacted/', true);
 						request.onload = function() {
 							var myArr = JSON.parse(this.responseText);
 							if ((this.status === 200) && myArr.includes('form_sent: \"true\"') == true) {
