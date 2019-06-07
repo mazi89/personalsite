@@ -8,6 +8,7 @@ from django.http import JsonResponse
 from django.db.models import Sum
 import random
 import urllib
+import urllib.request
 
 def display_html(request):
         query = splash_post.objects.all()
