@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	form.addEventListener('submit', function(event){
 					event.preventDefault();
 					var request = new XMLHttpRequest();
-					request.open("POST", 'https://abdinasirnoor.com/contacted/', true);
+					request.open("POST", 'abdinasirnoor.com/contacted/', true);
 						request.onload = function() {
 							var myArr = JSON.parse(this.responseText);
-							if ((this.status === 200) || myArr.includes('form_sent: \"true\"')) {
+							if ((this.status === 200) && myArr.includes('form_sent: \"true\"') == true) {
 							 $("#contactModal").modal('hide'); // remove contactModal
 							 $("#successModal").modal('show'); //success message
 							 $(".btn-default").replaceWith('<p class="h2">Message has been sent <i class="far fa-thumbs-up fa-2x"></i></p>');
