@@ -138,7 +138,8 @@ def send_reply_mail(sender, instance, **kwargs):
     subject = 'RE: abdinasirnoor.com'
     body = instance.get(message)
     origin_address = 'Abdinasir@abdinasirnoor.com'
-    instance.get('replied') = True
+    replied = instance.get('replied')
+    replied.update(replied=True)
     return send_mail(
                 subject,
                 message,
