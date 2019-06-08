@@ -33,7 +33,7 @@ class ProductAdmin(admin.ModelAdmin):
 class CartAdmin(admin.ModelAdmin):
     readonly_fields = ('updated','timestamp',)
 
-class ReplyAdmin(admin.InlineModelAdmin):
+class ReplyAdmin(admin.TabularInline):
     model = Reply
 
 @admin.register(contact_me)
