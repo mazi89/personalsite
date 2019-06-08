@@ -131,7 +131,7 @@ class Reply(models.Model):
     replied = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.email
+        return str(self.email.email_field)
 @receiver(post_save, sender=Reply)
 def send_reply_mail(sender, instance, **kwargs):
     contact_init = contact_me.objects.filter(id=instance.email.id)
@@ -139,8 +139,8 @@ def send_reply_mail(sender, instance, **kwargs):
     subject = 'RE: abdinasirnoor.com'
     body = instance.message
     origin_address = 'Abdinasir@abdinasirnoor.com'
-    # replied = instance.replied
-    # replied = True
+    replied = instance.replied
+    replied = True
     send_mail(
                 subject,
                 body,
