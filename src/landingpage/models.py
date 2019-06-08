@@ -134,11 +134,11 @@ class Reply(models.Model):
         return self.email
 @receiver(post_save, sender=Reply)
 def send_reply_mail(sender, instance, **kwargs):
-    email_address = instance.get(email_field)
+    email_address = instance.objects.get(email_field)
     subject = 'RE: abdinasirnoor.com'
-    body = instance.get(message)
+    body = instance.objects.get(message)
     origin_address = 'Abdinasir@abdinasirnoor.com'
-    replied = instance.get('replied')
+    replied = instance.objects.get(replied)
     replied.update(replied=True)
     return send_mail(
                 subject,
