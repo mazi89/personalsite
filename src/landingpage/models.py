@@ -141,7 +141,7 @@ def send_reply_mail(sender, instance, **kwargs):
     origin_address = 'Abdinasir@abdinasirnoor.com'
     replied = instance.replied
     replied = True
-    return send_mail(
+    send_mail(
                 subject,
                 body,
                 origin_address,
