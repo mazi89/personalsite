@@ -6,6 +6,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import User
 from django.db.models import F
+from django.core.mail import send_mail
 
 from decimal import *
 import os
@@ -124,7 +125,29 @@ class Add_to_cart(models.Model):
 #         cart_locked.update(count= instance.quantity_of_product)
 #         cart_locked.update(updated= datetime.now())
 #         # stock_field -= F(instance.cart_foreign.count)
+class Reply(models.Model):
+    email = models.ForeignKey(contact_me, related_name='Reply', on_delete=models.CASCADE)
+    message = models.TextField()
+    replied = models.BooleanField(default=False)
 
+    def __str__(self):
+        return str(self.email.email_field)
+@receiver(post_save, sender=Reply)
+def send_reply_mail(sender, instance, **kwargs):
+    contact_init = contact_me.objects.filter(id=instance.email.id)
+    email_address = contact_init.values_list('email_field',flat=True).first()
+    subject = 'RE: abdinasirnoor.com'
+    body = instance.message
+    origin_address = 'Abdinasir@abdinasirnoor.com'
+    replied = instance.replied
+    replied = True
+    send_mail(
+                subject,
+                body,
+                origin_address,
+                [email_address],
+                fail_silently=False,
+            )
 @receiver(post_save, sender=Add_to_cart)
 def update_cart(sender, instance, **kwargs):
     with transaction.atomic():

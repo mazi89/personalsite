@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import *
 from django.utils.safestring import mark_safe
+
 class ReadDate(admin.ModelAdmin):
     readonly_fields = ('date_field',)
 class CategoryAdmin(admin.ModelAdmin):
@@ -31,10 +32,20 @@ class ProductAdmin(admin.ModelAdmin):
     )
 class CartAdmin(admin.ModelAdmin):
     readonly_fields = ('updated','timestamp',)
+
+class ReplyAdmin(admin.TabularInline):
+    model = Reply
+
+@admin.register(contact_me)
+class ContactMeAdmin(admin.ModelAdmin):
+    readonly_fields = ('date_field',)
+    inlines = [
+        ReplyAdmin,
+    ]
 admin.site.register(splash_post)
 admin.site.register(blog_post)
-admin.site.register(contact_me, ReadDate)
 admin.site.register(category, CategoryAdmin)
 admin.site.register(product, ProductAdmin)
 admin.site.register(Cart, CartAdmin)
 admin.site.register(Add_to_cart)
+# admin.site.register(Reply)

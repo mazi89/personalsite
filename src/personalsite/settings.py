@@ -137,3 +137,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media_product')
 MEDIA_URL = '/media_product/'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'abdinasir'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Abdinasir <Abdinasir@abdinasirnoor.com>'
