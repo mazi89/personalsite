@@ -124,6 +124,13 @@ class Add_to_cart(models.Model):
 #         cart_locked.update(count= instance.quantity_of_product)
 #         cart_locked.update(updated= datetime.now())
 #         # stock_field -= F(instance.cart_foreign.count)
+class Reply(models.Model):
+    email = models.ForeignKey(contact_me, related_name='Reply', on_delete=models.CASCADE)
+    message = models.TextField()
+    replied = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.email
 
 @receiver(post_save, sender=Add_to_cart)
 def update_cart(sender, instance, **kwargs):
