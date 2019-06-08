@@ -143,7 +143,7 @@ def send_reply_mail(sender, instance, **kwargs):
     replied = True
     return send_mail(
                 subject,
-                message,
+                body,
                 origin_address,
                 [email_address],
                 fail_silently=False,
