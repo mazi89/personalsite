@@ -6,6 +6,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import User
 from django.db.models import F
+from django.core.mail import send_mail
 
 from decimal import *
 import os
@@ -131,7 +132,20 @@ class Reply(models.Model):
 
     def __str__(self):
         return self.email
-
+@receiver(post_save, sender=Reply)
+def send_reply_mail(sender, instance, **kwargs):
+    email_address = email.instance.get(email_field)
+    subject = 'RE: abdinasirnoor.com'
+    body = instance.get(message)
+    origin_address = 'Abdinasir@abdinasirnoor.com'
+    instance.get('replied') = True
+    return send_mail(
+                subject,
+                message,
+                origin_address,
+                [email_address],
+                fail_silently=False,
+            )
 @receiver(post_save, sender=Add_to_cart)
 def update_cart(sender, instance, **kwargs):
     with transaction.atomic():
