@@ -34,7 +34,7 @@ class ProductAdmin(admin.ModelAdmin):
 class CartAdmin(admin.ModelAdmin):
     readonly_fields = ('updated','timestamp',)
 
-class ReplyModel(admin.ModelAdmin):
+class Reply(admin.ModelAdmin):
     def sendEmail(self):
         return send_mail(
             'Subject here',
