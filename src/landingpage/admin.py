@@ -34,14 +34,14 @@ class ProductAdmin(admin.ModelAdmin):
 class CartAdmin(admin.ModelAdmin):
     readonly_fields = ('updated','timestamp',)
 
-class Reply(admin.ModelAdmin):
-    def sendEmail(self):
-        return send_mail(
-            'Subject here',
-            'Here is the message.',
-            ['abdinasirnoor.com'],
-            fail_silently=False,
-        )
+# class Reply(admin.ModelAdmin):
+    # def sendEmail(self):
+    #     return send_mail(
+    #         'Subject here',
+    #         'Here is the message.',
+    #         ['abdinasirnoor.com'],
+    #         fail_silently=False,
+    #     )
 admin.site.register(splash_post)
 admin.site.register(blog_post)
 admin.site.register(contact_me, ReadDate)
