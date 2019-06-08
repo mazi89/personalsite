@@ -134,7 +134,7 @@ class Reply(models.Model):
         return self.email
 @receiver(post_save, sender=Reply)
 def send_reply_mail(sender, instance, **kwargs):
-    contact_init = contact_me.objects.get(id=instance.email.id)
+    contact_init = contact_me.objects.filter(id=instance.email.id)
     email_address = contact_init.objects.values_list('email_field',flat=True).first()
     subject = 'RE: abdinasirnoor.com'
     body = instance.objects.get(message)
