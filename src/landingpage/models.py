@@ -144,7 +144,7 @@ class Email(models.Model):
         return str(self.email_to)
 
 @receiver(post_save, sender=Email)
-def send_reply_mail(sender, instance, **kwargs):
+def send_email(sender, instance, **kwargs):
     email_address = instance.email_to
     subject = instance.subject_field
     body = instance.message_body
