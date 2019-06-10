@@ -139,11 +139,11 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.abdinasirnoor.com'
+EMAIL_HOST = 'localhost'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'abdinasir'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
-EMAIL_SSL_CERTFILE = '/etc/letsencrypt/live/abdinasirnoor.com-0001/cert.pem'
+EMAIL_SSL_CERTFILE = '/etc/letsencrypt/live/abdinasirnoor.com-0001/fullchain.pem'
 EMAIL_SSL_KEYFILE = '/etc/letsencrypt/live/abdinasirnoor.com-0001/privkey.pem'
 DEFAULT_FROM_EMAIL = 'Abdinasir <Abdinasir@abdinasirnoor.com>'
