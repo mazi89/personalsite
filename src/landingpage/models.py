@@ -143,7 +143,7 @@ class Email(models.Model):
     def __str__(self):
         return str(self.email_to)
 
-@receiver(pre_save, sender=Email)
+@receiver(post_save, sender=Email)
 def send_reply_mail(sender, instance, **kwargs):
     email_address = instance.email_to
     subject = instance.subject_field
