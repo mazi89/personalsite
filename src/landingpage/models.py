@@ -132,6 +132,34 @@ class Reply(models.Model):
 
     def __str__(self):
         return str(self.email.email_field)
+
+class Email(models.Model):
+    email_to = models.EmailField(max_length=254)
+    subject_field = models.CharField(max_length=256)
+    message_body = models.TextField()
+    date_sent = models.DateTimeField(auto_now_add=True)
+    replied = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.email_to)
+
+@receiver(pre_save, sender=Email)
+def send_reply_mail(sender, instance, **kwargs):
+    email_address = instance.email_to
+    subject = instance.subject_field
+    body = instance.message_body
+    origin_address = 'Abdinasir@mail.abdinasirnoor.com'
+    replied = instance.replied
+    replied = True
+    send_mail(
+                subject,
+                body,
+                origin_address,
+                [email_address],
+                fail_silently=False,
+            )
+
+
 @receiver(post_save, sender=Reply)
 def send_reply_mail(sender, instance, **kwargs):
     contact_init = contact_me.objects.filter(id=instance.email.id)
@@ -148,6 +176,8 @@ def send_reply_mail(sender, instance, **kwargs):
                 [email_address],
                 fail_silently=False,
             )
+
+
 @receiver(post_save, sender=Add_to_cart)
 def update_cart(sender, instance, **kwargs):
     with transaction.atomic():
