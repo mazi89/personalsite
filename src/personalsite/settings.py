@@ -139,7 +139,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'localhost'
+EMAIL_HOST = 'mail.abdinasirnoor.com'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'abdinasir'
 EMAIL_HOST_PASSWORD = ''
