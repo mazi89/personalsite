@@ -148,7 +148,7 @@ def send_email(sender, instance, **kwargs):
     email_address = instance.email_to
     subject = instance.subject_field
     body = instance.message_body
-    origin_address = 'Abdinasir@mabdinasirnoor.com'
+    origin_address = 'Abdinasir@abdinasirnoor.com'
     replied = instance.replied
     replied = True
     send_mail(
