@@ -1,6 +1,6 @@
 import os
 import mailbox
-from .models import Inbox
+from models import Inbox
 mbox = mailbox.Maildir('~/Maildir/new')
 
 for message in mbox:
