@@ -1,5 +1,4 @@
-import os
-import mailbox, django
+import sys, os, mailbox, django
 sys.path.append("/sites/abdinasinoor.com/src/landingpage")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "personalsite.settings")
 django.setup()
