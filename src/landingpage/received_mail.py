@@ -1,5 +1,8 @@
 import sys, os, mailbox, django
-django.configure()
+from django.conf import settings
+if not settings.configured:
+    settings.configure(personalsite, DEBUG=True)
+
 from core.models import Inbox
 mbox = mailbox.Maildir('~/Maildir/new')
 
