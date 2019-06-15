@@ -1,5 +1,5 @@
 import sys, os, mailbox, django
-django.settings.configure()
+django.configure()
 from core.models import Inbox
 mbox = mailbox.Maildir('~/Maildir/new')
 
