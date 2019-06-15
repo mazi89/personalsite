@@ -1,7 +1,7 @@
 import os
 import mailbox
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "personalsite.settings")
-from personalsite.models import Inbox
+from core.models import (Inbox,)
 mbox = mailbox.Maildir('~/Maildir/new')
 
 for message in mbox:
