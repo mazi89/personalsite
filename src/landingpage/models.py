@@ -143,12 +143,23 @@ class Email(models.Model):
     def __str__(self):
         return str(self.email_to)
 
+class Inbox(models.Model):
+    delivered_to = models.EmailField(max_length=254)
+    email_from = models.EmailField(max_length=254)
+    subject_field = models.CharField(max_length=256)
+    message_body = models.TextField()
+    date_received = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.subject_field)
+
+
 @receiver(post_save, sender=Email)
 def send_email(sender, instance, **kwargs):
     email_address = instance.email_to
     subject = instance.subject_field
     body = instance.message_body
-    origin_address = 'Abdinasir@mail.abdinasirnoor.com'
+    origin_address = 'Abdinasir@abdinasirnoor.com'
     replied = instance.replied
     replied = True
     send_mail(
@@ -159,6 +170,19 @@ def send_email(sender, instance, **kwargs):
                 fail_silently=False,
             )
 
+@receiver(post_save, sender=Inbox)
+def send_notification(sender, instance, **kwargs):
+    subject = 'New Email received'
+    body = instance.date_received + "/n" + instance.email_from \
+           "/n" + instance.subject_field + "/n" + instance.message_body
+    origin_address = 'Abdinasir@abdinasirnoor.com'
+    send_mail(
+                subject,
+                body,
+                origin_address,
+                ['abdinasirnoor@outlook.com'],
+                fail_silently=False,
+            )
 
 @receiver(post_save, sender=Reply)
 def send_reply_mail(sender, instance, **kwargs):
