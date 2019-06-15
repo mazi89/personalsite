@@ -174,7 +174,7 @@ def send_email(sender, instance, **kwargs):
 def send_notification(sender, instance, **kwargs):
     subject = 'New Email received'
     body = instance.date_received + "/n" + instance.email_from \
-           "/n" + instance.subject_field + "/n" + instance.message_body
+            + "/n" + instance.subject_field + "/n" + instance.message_body
     origin_address = 'Abdinasir@abdinasirnoor.com'
     send_mail(
                 subject,
