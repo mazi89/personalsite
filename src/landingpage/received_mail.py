@@ -1,7 +1,9 @@
 import os
-import mailbox
+import mailbox, django
+sys.path.append("/sites/abdinasinoor.com/src/landingpage")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "personalsite.settings")
-from core.models import (Inbox,)
+django.setup()
+from core.models import Inbox
 mbox = mailbox.Maildir('~/Maildir/new')
 
 for message in mbox:
