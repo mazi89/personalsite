@@ -1,7 +1,7 @@
 import sys, os, mailbox, django
 from django.conf import settings
 
-from .models import Inbox
+from landingpage.models import Inbox
 mbox = mailbox.Maildir('~/Maildir/new')
 
 for message in mbox:
