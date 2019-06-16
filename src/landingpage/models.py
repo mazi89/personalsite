@@ -173,8 +173,9 @@ def send_email(sender, instance, **kwargs):
 @receiver(post_save, sender=Inbox)
 def send_notification(sender, instance, **kwargs):
     subject = 'New Email received'
-    body ="date: "str(instance.date_received) + " email from: " + instance.email_from + " subject: " + instance.subject_field + " message: " + instance.message_body
-    origin_address = 'abdinasir@abdinasirnoor.com'
+    body ="date: " + str(instance.date_received) + " email from: " + instance.email_from \
+            + " subject: " + instance.subject_field + " message" + instance.message_body
+    origin_address = 'Abdinasir@abdinasirnoor.com'
     send_mail(
                 subject,
                 body,
