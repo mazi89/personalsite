@@ -7,7 +7,7 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 from landingpage.models import Inbox
 
-class notify_new_messages(BaseCommand):
+class Command(BaseCommand):
     help = 'send email notification'
 
     def handle(self, *args, **options):
