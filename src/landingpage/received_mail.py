@@ -2,6 +2,8 @@
 import sys, os, mailbox
 sys.path.append('/sites/abdinasirnoor.com/.venv/bin/python')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "personalsite.settings")
+os.environ["DJANGO_SETTINGS_MODULE"] = 'personalsite.settings'
+django.setup()
 import django
 from django.conf import settings
 from django.core.management.base import BaseCommand
