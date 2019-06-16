@@ -26,3 +26,6 @@ class Command(BaseCommand):
             )
             inbox_object.save()
             print('New message received')
+
+if __name__ == '__main__':
+    Command.handle()
