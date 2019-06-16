@@ -1,6 +1,8 @@
-#!/sites/abdinasirnoor.com/.venv/bin/python
-import sys, os, mailbox, django
+#!/sites/abdinasirnoor.com/.venv/bin/python3.6
+import sys, os, mailbox
 sys.path.append('/sites/abdinasirnoor.com/.venv/bin/python')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "personalsite.settings")
+import django
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from landingpage.models import Inbox
