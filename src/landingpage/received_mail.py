@@ -1,4 +1,6 @@
+#!/sites/abdinasirnoor.com/.venv/bin/python
 import sys, os, mailbox, django
+sys.path.append('/sites/abdinasirnoor.com/.venv/bin/python')
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from landingpage.models import Inbox
