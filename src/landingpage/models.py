@@ -9,7 +9,7 @@ from django.db.models import F
 from django.core.mail import send_mail
 
 from decimal import *
-import os
+import os, datetime
 
 class splash_post(models.Model):
         splash_heading = models.CharField(max_length=512)
@@ -173,7 +173,11 @@ def send_email(sender, instance, **kwargs):
 @receiver(post_save, sender=Inbox)
 def send_notification(sender, instance, **kwargs):
     subject = 'New Email received'
-    body = "date: " + str(instance.date_received) + " email from: " + instance.email_from + " subject: " + instance.subject_field + " message" + instance.message_body
+    tm = instance.date_received
+    tm = tm - datetime.timedelta(minutes=tm.minute % 10,
+                             seconds=tm.second,
+                             microseconds=tm.microsecond)
+    body = "date: " + str(tm) + " email from: " + instance.email_from + " subject: " + instance.subject_field + " message: " + instance.message_body
     origin_address = 'abdinasir@abdinasirnoor.com'
     send_mail(
                 subject,
