@@ -174,12 +174,12 @@ def send_email(sender, instance, **kwargs):
 def send_notification(sender, instance, **kwargs):
     subject = 'New Email received'
     body ="date: " + str(instance.date_received) + " email from: " + instance.email_from + " subject: " + instance.subject_field + " message" + instance.message_body
-    origin_address = 'Abdinasir@abdinasirnoor.com'
+    origin_address = 'abdinasir@abdinasirnoor.com'
     send_mail(
                 subject,
                 body,
                 origin_address,
-                ['abdinasirnoor@outlook.com'],
+                ['abdinasirnoor@outlook.com',],
                 fail_silently=False,
             )
 
@@ -189,7 +189,7 @@ def send_reply_mail(sender, instance, **kwargs):
     email_address = contact_init.values_list('email_field',flat=True).first()
     subject = 'RE: abdinasirnoor.com'
     body = instance.message
-    origin_address = 'Abdinasir@abdinasirnoor.com'
+    origin_address = 'abdinasir@abdinasirnoor.com'
     replied = instance.replied
     replied = True
     send_mail(
