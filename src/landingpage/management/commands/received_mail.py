@@ -3,7 +3,6 @@ import sys, os, mailbox
 sys.path.append('/sites/abdinasirnoor.com/src/')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "personalsite.settings")
 os.environ["DJANGO_SETTINGS_MODULE"] = 'personalsite.settings'
-django.setup()
 import django
 django.setup()
 from django.conf import settings
