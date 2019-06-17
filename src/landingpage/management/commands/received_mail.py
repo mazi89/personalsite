@@ -16,9 +16,9 @@ class Command(BaseCommand):
         mbox = mailbox.Maildir('~/Maildir/')
         for message in mbox:
             if message.is_multipart():
-                content = ''.join([part.get_payload().as_string() for part in message.get_payload()])
+                content = ''.join([part.get_payload(decode=True) for part in message.get_payload()])
             else:
-                content = message.get_payload().as_string()
+                content = message.get_payload(decode=True).as_string()
             inbox_object = Inbox(
             delivered_to=message['Delivered-To'],
             email_from=message['From'],
