@@ -13,7 +13,7 @@ class Command(BaseCommand):
     help = 'send email notification'
 
     def handle(self, *args, **options):
-        mbox = mailbox.Maildir('~/Maildir/new')
+        mbox = mailbox.Maildir('~/Maildir/')
         for message in mbox:
             if message.is_multipart():
                 content = ''.join([part.get_payload(decode=True).as_string() for part in message.get_payload()])
