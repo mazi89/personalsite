@@ -8,3 +8,5 @@ src/landingpage/__init__.py
 src/personalsite/__init__.py
 /secrets.json
 src/static/landingpage/imgs/Logo.png
+src/landingapge/__pycache__
+src/personalsite/__pycache__

@@ -1,10 +1,11 @@
 #!/sites/abdinasirnoor.com/.venv/bin/python3.6
 import sys, os, mailbox
-sys.path.append('/sites/abdinasirnoor.com/.venv/bin/python')
+sys.path.append('/sites/abdinasirnoor.com/src/')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "personalsite.settings")
 os.environ["DJANGO_SETTINGS_MODULE"] = 'personalsite.settings'
 django.setup()
 import django
+django.setup()
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from landingpage.models import Inbox
@@ -27,7 +28,6 @@ class Command(BaseCommand):
             date_received=message['Received'],
             )
             inbox_object.save()
-            print('New message received')
+            self.stdout.write(self.style.SUCCESS('Successfully added messages!')
 
-if __name__ == '__main__':
-    Command.handle()
+
