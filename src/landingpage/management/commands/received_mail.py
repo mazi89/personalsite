@@ -18,7 +18,7 @@ class Command(BaseCommand):
             if message.is_multipart():
                 content = ''.join([part.as_string() for part in message.get_payload()])
             else:
-                content = message.get_payload(decode=True)
+                content = str(message.get_payload(decode=True))
             inbox_object = Inbox(
             delivered_to=message['Delivered-To'],
             email_from=message['From'],
