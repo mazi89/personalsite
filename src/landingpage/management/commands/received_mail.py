@@ -28,6 +28,4 @@ class Command(BaseCommand):
             date_received=message['Received'],
             )
             inbox_object.save()
-            self.stdout.write(self.style.SUCCESS('Successfully added messages!')
-
-
+        self.stdout.write(self.style.SUCCESS('Successfully added messages!')
