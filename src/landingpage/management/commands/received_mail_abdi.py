@@ -24,7 +24,7 @@ class Command(BaseCommand):
                     content = str(message.get_payload(decode=True))
                 #remove comma and paranthesis around time zone causes format error
                 date_cleaned = message['Date']
-                date_cleaned = date_cleaned.translate(str.maketrans({',': '', '(EDT)': '',}))
+                date_cleaned = date_cleaned.replace('(EDT)','').replace(',','')
                 inbox_object = Inbox(
                 message_id=message['Message-ID'],
                 delivered_to=message['Delivered-To'],
