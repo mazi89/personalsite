@@ -144,7 +144,7 @@ class Email(models.Model):
         return str(self.email_to)
 
 class Inbox(models.Model):
-    message_id = models.CharField(max_length=256,unique=True)
+    message_id = models.CharField(max_length=250,unique=True)
     delivered_to = models.EmailField(max_length=254)
     email_from = models.EmailField(max_length=254)
     subject_field = models.CharField(max_length=256)
