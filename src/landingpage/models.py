@@ -153,12 +153,12 @@ class Inbox(models.Model):
     original_date = models.DateTimeField()
 
     def __str__(self):
-        return str(self.subject_field + " " + self.original_date.strftime("%M-%d-%y %H:%M:%S"))
+        return str(self.subject_field + " " + self.original_date.strftime("%c"))
 
     class Meta:
         verbose_name = 'Inbox Email'
         verbose_name_plural = 'Inbox Emails'
-        ordering = ('-original_date',)
+        ordering = ('original_date',)
 
 
 @receiver(post_save, sender=Email)
