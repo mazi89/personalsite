@@ -31,7 +31,7 @@ class Command(BaseCommand):
                 email_from=message['From'],
                 subject_field=message['Subject'],
                 message_body=content,
-                original_date=datetime.strptime(date_cleaned, '%a %d-%b-%Y %H:%M:%S %z %Z'),
+                original_date=datetime.strptime(date_cleaned, '%a %d %b %Y %H:%M:%S %z %Z'),
                 )
                 inbox_object.save()
                 self.stdout.write(self.style.SUCCESS('Successfully added messages!'))
