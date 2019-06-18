@@ -144,6 +144,7 @@ class Email(models.Model):
         return str(self.email_to)
 
 class Inbox(models.Model):
+    message_id = models.CharField(max_length=256,unique=True)
     delivered_to = models.EmailField(max_length=254)
     email_from = models.EmailField(max_length=254)
     subject_field = models.CharField(max_length=256)
@@ -151,7 +152,12 @@ class Inbox(models.Model):
     date_received = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return str(self.subject_field)
+        return str(self.subject_field, self.date_received.strftime("%M/%D/%Y, %H:%M:%S"))
+
+    class Meta:
+        verbose_name = 'Inbox Email'
+        verbose_name_plural = 'Inbox Emails'
+        ordering = ['date_received']
 
 
 @receiver(post_save, sender=Email)
@@ -174,9 +180,7 @@ def send_email(sender, instance, **kwargs):
 def send_notification(sender, instance, **kwargs):
     subject = 'New Email received'
     tm = instance.date_received
-    tm = tm - datetime.timedelta(minutes=tm.minute % 10,
-                             seconds=tm.second,
-                             microseconds=tm.microsecond)
+    tm = tm.strftime("%M/%D/%Y, %H:%M:%S")
     body = "date: " + str(tm) + " email from: " + instance.email_from + " subject: " + instance.subject_field + " message: " + instance.message_body
     origin_address = 'abdinasir@abdinasirnoor.com'
     send_mail(
