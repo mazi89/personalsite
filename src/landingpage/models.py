@@ -153,7 +153,7 @@ class Inbox(models.Model):
     original_date = models.DateTimeField()
 
     def __str__(self):
-        return str(self.subject_field + " " + self.original_date.strftime("%c"))
+        return str(self.subject_field)
 
     class Meta:
         verbose_name = 'Inbox Email'
