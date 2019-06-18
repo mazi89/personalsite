@@ -42,11 +42,12 @@ class ContactMeAdmin(admin.ModelAdmin):
     inlines = [
         ReplyAdmin,
     ]
-@admin.register(contact_me)
+@admin.register(Inbox)
 class InboxAdmin(admin.ModelAdmin):
     model = Inbox
     ordering = ('-date_received',)
     readonly_fields = ("date_received",)
+
 admin.site.register(splash_post)
 admin.site.register(blog_post)
 admin.site.register(category, CategoryAdmin)
