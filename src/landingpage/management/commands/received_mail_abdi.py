@@ -8,7 +8,7 @@ django.setup()
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from landingpage.models import Inbox
-
+import datetime
 class Command(BaseCommand):
     help = 'send email notification'
 
@@ -27,7 +27,7 @@ class Command(BaseCommand):
                 email_from=message['From'],
                 subject_field=message['Subject'],
                 message_body=content,
-                original_date=message['Date'],
+                original_date=datetime.strptime(message['Date'].replace('EDT',''), ' %YYYY-%MM-%DD %HH:%MM:%SS'),
                 )
                 inbox_object.save()
                 self.stdout.write(self.style.SUCCESS('Successfully added messages!'))
