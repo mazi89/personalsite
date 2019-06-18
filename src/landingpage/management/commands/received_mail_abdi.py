@@ -9,6 +9,7 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 from landingpage.models import Inbox
 from datetime import datetime
+from string import maketrans
 
 class Command(BaseCommand):
     help = 'send email notification'
@@ -22,13 +23,17 @@ class Command(BaseCommand):
                     content = ''.join([part.as_string() for part in message.get_payload()])
                 else:
                     content = str(message.get_payload(decode=True))
+                #remove comma and paranthesis around time zone causes format error
+                date_cleaned = message['Date']
+                date_cleaned = date_cleaned.translate(str.maketrans({',': '', '(': '', ')': '',})) 
                 inbox_object = Inbox(
                 message_id=message['Message-ID'],
                 delivered_to=message['Delivered-To'],
                 email_from=message['From'],
                 subject_field=message['Subject'],
                 message_body=content,
-                original_date=datetime.strptime(message['Date'].replace('EDT',''), '%a %d-%b-%Y %H:%M:%S %z'),
+
+                original_date=datetime.strptime(, '%a %d-%b-%Y %H:%M:%S %z %Z'),
                 )
                 inbox_object.save()
                 self.stdout.write(self.style.SUCCESS('Successfully added messages!'))
