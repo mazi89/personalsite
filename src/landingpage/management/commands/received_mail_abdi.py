@@ -9,7 +9,6 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 from landingpage.models import Inbox
 from datetime import datetime
-from string import maketrans
 
 class Command(BaseCommand):
     help = 'send email notification'
