@@ -152,7 +152,7 @@ class Inbox(models.Model):
     date_received = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return str(self.subject_field, self.date_received.strftime("%M/%D/%Y, %H:%M:%S"))
+        return str(self.subject_field + " " + self.date_received.strftime("%M/%D/%Y, %H:%M:%S"))
 
     class Meta:
         verbose_name = 'Inbox Email'
