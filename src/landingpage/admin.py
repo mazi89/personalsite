@@ -45,8 +45,8 @@ class ContactMeAdmin(admin.ModelAdmin):
 @admin.register(Inbox)
 class InboxAdmin(admin.ModelAdmin):
     model = Inbox
-    ordering = ('-date_received',)
-    readonly_fields = ("date_received",)
+    ordering = ('date_received',)
+    readonly_fields = ("date_received","original_date",)
 
 admin.site.register(splash_post)
 admin.site.register(blog_post)

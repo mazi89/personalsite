@@ -27,7 +27,7 @@ class Command(BaseCommand):
                 email_from=message['From'],
                 subject_field=message['Subject'],
                 message_body=content,
-                date_received=message['Received'],
+                original_date=message['Received'],
                 )
                 inbox_object.save()
                 self.stdout.write(self.style.SUCCESS('Successfully added messages!'))
