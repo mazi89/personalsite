@@ -25,15 +25,14 @@ class Command(BaseCommand):
                     content = str(message.get_payload(decode=True))
                 #remove comma and paranthesis around time zone causes format error
                 date_cleaned = message['Date']
-                date_cleaned = date_cleaned.translate(str.maketrans({',': '', '(': '', ')': '',})) 
+                date_cleaned = date_cleaned.translate(str.maketrans({',': '', '(': '', ')': '',}))
                 inbox_object = Inbox(
                 message_id=message['Message-ID'],
                 delivered_to=message['Delivered-To'],
                 email_from=message['From'],
                 subject_field=message['Subject'],
                 message_body=content,
-
-                original_date=datetime.strptime(, '%a %d-%b-%Y %H:%M:%S %z %Z'),
+                original_date=datetime.strptime(date_cleaned, '%a %d-%b-%Y %H:%M:%S %z %Z'),
                 )
                 inbox_object.save()
                 self.stdout.write(self.style.SUCCESS('Successfully added messages!'))
