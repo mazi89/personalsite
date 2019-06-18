@@ -42,6 +42,11 @@ class ContactMeAdmin(admin.ModelAdmin):
     inlines = [
         ReplyAdmin,
     ]
+@admin.register(contact_me)
+class InboxAdmin(admin.ModelAdmin):
+    model = Inbox
+    ordering = ('-date_received',)
+    readonly_fields = ("date_received",)
 admin.site.register(splash_post)
 admin.site.register(blog_post)
 admin.site.register(category, CategoryAdmin)
@@ -49,4 +54,3 @@ admin.site.register(product, ProductAdmin)
 admin.site.register(Cart, CartAdmin)
 admin.site.register(Add_to_cart)
 admin.site.register(Email)
-admin.site.register(Inbox)
