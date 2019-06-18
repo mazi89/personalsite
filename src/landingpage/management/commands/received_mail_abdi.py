@@ -15,8 +15,8 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         mbox = mailbox.Maildir('/home/abdinasir/Maildir/')
         for message in mbox:
-            message_object = Inbox.objects.get(message_id=message['Message-ID'])
-            if (Inbox.objects.filter(message_id=message_object.message_id).exists() == False):
+            message_object = Inbox.objects.filter(message_id=message['Message-ID']).exists()
+            if (message_object == False):
                 if message.is_multipart():
                     content = ''.join([part.as_string() for part in message.get_payload()])
                 else:
