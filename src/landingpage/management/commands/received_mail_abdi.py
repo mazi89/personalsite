@@ -8,7 +8,8 @@ django.setup()
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from landingpage.models import Inbox
-import datetime
+from datetime import datetime
+
 class Command(BaseCommand):
     help = 'send email notification'
 
