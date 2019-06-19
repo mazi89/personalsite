@@ -15,6 +15,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         mbox = mailbox.Maildir('/home/abdinasir/Maildir/')
+        mbox.lock()
+        mbox.add(message)
+        self.stdout.write(self.style.SUCCESS('Message added!'))
         for message in mbox:
             message_object = Inbox.objects.filter(message_id=message['Message-ID']).exists()
             if (message_object == False):
@@ -35,4 +38,4 @@ class Command(BaseCommand):
                 )
                 inbox_object.save()
                 self.stdout.write(self.style.SUCCESS('Successfully added messages!'))
-        self.stdout.write(self.style.SUCCESS('Messages added! Shutting down....'))
+        self.stdout.write(self.style.SUCCESS('Messages added to inbox, shutting down....'))
