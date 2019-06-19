@@ -15,9 +15,6 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         mbox = mailbox.Maildir('/home/abdinasir/Maildir/')
-        mbox.lock()
-        mbox.add(message)
-        self.stdout.write(self.style.SUCCESS('Message added!'))
         for message in mbox:
             message_object = Inbox.objects.filter(message_id=message['Message-ID']).exists()
             if (message_object == False):
