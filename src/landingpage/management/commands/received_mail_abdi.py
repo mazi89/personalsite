@@ -15,10 +15,6 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         mbox = mailbox.Maildir('/home/abdinasir/Maildir/')
-        # msg = mailbox.mboxMessage()
-        # mbox.lock()
-        # mbox.add(msg)
-        # mbox.unlock()
         for message in mbox:
             message_object = Inbox.objects.filter(message_id=message['Message-ID']).exists()
             if (message_object == False):
