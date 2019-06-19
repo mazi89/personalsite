@@ -181,8 +181,8 @@ def send_email(sender, instance, **kwargs):
 def send_notification(sender, instance, **kwargs):
     subject = 'New Email received'
     tm = instance.date_received
-    tm = tm.strftime("%M/%D/%Y, %H:%M:%S")
-    body = "date: " + str(tm) + " email from: " + instance.email_from + " subject: " + instance.subject_field + " message: " + instance.message_body
+    tm = datetime.datetime.strftime(tm, "%M %D %Y, %H:%M:%S")
+    body = "date: " + tm + " email from: " + instance.email_from + " subject: " + instance.subject_field + " message: " + instance.message_body
     origin_address = 'abdinasir@abdinasirnoor.com'
     send_mail(
                 subject,
