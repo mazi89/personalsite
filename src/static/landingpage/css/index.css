@@ -1,30 +1,3 @@
-/* Import font for logo  */
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Chelsea+Market&family=Merriweather+Sans&family=Open+Sans&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap'); */
-
-:root {
-    --20pxHeightSpace: calc(100vh - (100vh - 20px));
-    --15pxHeightSpace: calc(100vh - (100vh - 15px));
-    --10pxHeightSpace: calc(100vh - (100vh - 10px));
-    --20pxWidthSpace: calc(100vw - (100vw - 20px));
-    --15pxWidthSpace: calc(100vw - (100vw - 15px));
-    --10pxWidthSpace: calc(100vw - (100vw - 10px));
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html{
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    font-size: 16px;
-    scroll-behavior: smooth;
-}
-
 main {
   position: relative;
   margin: 100px 0;
@@ -222,7 +195,10 @@ section {
 }
 
 @media only screen and (min-width: 1000px) {
-
+  #homeContainer {
+    border: 0px;
+    border-bottom: 60px solid black;
+  }
   #imageContainer {
       width: 70vw;
   }
@@ -251,6 +227,12 @@ section {
 }
 
 @media only screen and (min-width: 1500px) {
+
+  #homeContainer {
+    border-bottom: 0px;
+    border: 35px solid black;
+    padding: var(--20pxWidthSpace);
+  }
 
   #intro {
       font-size: 3rem;
@@ -282,4 +264,9 @@ section {
   #tagline {
       font-size: 2rem;
   }
+
+  #breathe {
+    width: 200px;
+  }
+  
 }
