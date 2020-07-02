@@ -1,23 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--                                                                                                              
+___       ___               ___                                               
+`MMb     dMM'               `MM                                               
+ MMM.   ,PMM                 MM                                               
+ M`Mb   d'MM    ___      ____MM   ____                                        
+ M YM. ,P MM  6MMMMb    6MMMMMM  6MMMMb                                       
+ M `Mb d' MM 8M'  `Mb  6M'  `MM 6M'  `Mb                                      
+ M  YM.P  MM     ,oMM  MM    MM MM    MM                                      
+ M  `Mb'  MM ,6MM9'MM  MM    MM MMMMMMMM                                      
+ M   YP   MM MM'   MM  MM    MM MM                                            
+ M   `'   MM MM.  ,MM  YM.  ,MM YM    d9                                      
+_M_      _MM_`YMMM9'Yb. YMMMMMM_ YMMMM9                                       
+                                                                              
+________                                                                      
+`MMMMMMMb.                                                                    
+ MM    `Mb                                                                    
+ MM     MM ____    ___                                                        
+ MM    .M9 `MM(    )M'                                                        
+ MMMMMMM(   `Mb    d'                                                         
+ MM    `Mb   YM.  ,P                                                          
+ MM     MM    MM  M                                                           
+ MM     MM    `Mbd'                                                           
+ MM    .M9     YMP                                                            
+_MMMMMMM9'      M                                                             
+               d'                                                             
+           (8),P                                                              
+            YMM                                                               
+                                                                              
+       _      ___            ___                                              
+      dM.      MM            `MM 68b                              68b         
+     ,MMb      MM             MM Y89                              Y89         
+     d'YM.     MM____     ____MM ___ ___  __      ___      ____   ___ ___  __ 
+    ,P `Mb     MMMMMMb   6MMMMMM `MM `MM 6MMb   6MMMMb    6MMMMb\ `MM `MM 6MM 
+    d'  YM.    MM'  `Mb 6M'  `MM  MM  MMM9 `Mb 8M'  `Mb  MM'    `  MM  MM69 " 
+   ,P   `Mb    MM    MM MM    MM  MM  MM'   MM     ,oMM  YM.       MM  MM'    
+   d'    YM.   MM    MM MM    MM  MM  MM    MM ,6MM9'MM   YMMMMb   MM  MM     
+  ,MMMMMMMMb   MM    MM MM    MM  MM  MM    MM MM'   MM       `Mb  MM  MM     
+  d'      YM.  MM.  ,M9 YM.  ,MM  MM  MM    MM MM.  ,MM  L    ,MM  MM  MM     
+_dM_     _dMM__MYMMMM9   YMMMMMM__MM__MM_  _MM_`YMMM9'Yb.MYMMMM9  _MM__MM_    
+                                                                              
+-->
 <head>
     {% load static %}
     {% include "analytics.html" %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <style>
+    /* Import fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Chelsea+Market&family=Merriweather+Sans&family=Open+Sans&display=swap');
+
+    :root {
+        --20pxHeightSpace: calc(100vh - (100vh - 20px));
+        --15pxHeightSpace: calc(100vh - (100vh - 15px));
+        --10pxHeightSpace: calc(100vh - (100vh - 10px));
+        --20pxWidthSpace: calc(100vw - (100vw - 20px));
+        --15pxWidthSpace: calc(100vw - (100vw - 15px));
+        --10pxWidthSpace: calc(100vw - (100vw - 10px));
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html{
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+        font-size: 16px;
+        scroll-behavior: smooth;
+    }
+
+    p {
+        font-weight: 500;
+        font-family: 'Merriweather Sans', sans-serif;
+    }
+    </style>
     <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
     {% block css %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/loader.css' %}">
 </head>
 <body>
+{% include "loader.html" %}
 {% include "header.html" %}
 
 {% block content %}
 {% endblock %}
 
 {% include "footer.html" %}                       
-
+<script src="{% static 'js/loader.js' %}"></script>       
 <script src="{% static 'js/header.js' %}"></script>
 <script src="{% static 'js/footer.js' %}"></script>       
 </body>

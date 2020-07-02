@@ -1,33 +1,5 @@
-/* Import font for logo  */
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Chelsea+Market&family=Merriweather+Sans&family=Open+Sans&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap'); */
-
-:root {
-    --20pxHeightSpace: calc(100vh - (100vh - 20px));
-    --15pxHeightSpace: calc(100vh - (100vh - 15px));
-    --10pxHeightSpace: calc(100vh - (100vh - 10px));
-    --20pxWidthSpace: calc(100vw - (100vw - 20px));
-    --15pxWidthSpace: calc(100vw - (100vw - 15px));
-    --10pxWidthSpace: calc(100vw - (100vw - 10px));
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html{
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    font-size: 16px;
-    scroll-behavior: smooth;
-}
-
-
 footer {
-    margin-top: 200px;
+    margin-top: calc(100% - (100% - 50px));
     position: relative;
     bottom: 0px;
 }
@@ -36,13 +8,17 @@ footer {
     border-top: #000000 2px solid;
     list-style-type: none;
     text-align: center;
-    padding: 5px;
+    padding: var(--10pxHeightSpace);
 }
 
 #footer li {
     display: block;
     font-size: 1.25rem;
-    margin: 15px;
+    margin: var(--20pxWidthSpace);
+}
+
+#footer li:nth-child(2) {
+    font-family: "Merriweather Sans", sans-serif;
 }
 
 .footerButtons {
