@@ -1,0 +1,79 @@
+/* Import font for logo  */
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Chelsea+Market&family=Merriweather+Sans&family=Open+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap'); */
+
+:root {
+    --20pxHeightSpace: calc(100vh - (100vh - 20px));
+    --15pxHeightSpace: calc(100vh - (100vh - 15px));
+    --10pxHeightSpace: calc(100vh - (100vh - 10px));
+    --20pxWidthSpace: calc(100vw - (100vw - 20px));
+    --15pxWidthSpace: calc(100vw - (100vw - 15px));
+    --10pxWidthSpace: calc(100vw - (100vw - 10px));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+footer {
+    margin-top: 200px;
+    position: relative;
+    bottom: 0px;
+}
+
+#footer {
+    border-top: #000000 2px solid;
+    list-style-type: none;
+    text-align: center;
+    padding: 5px;
+}
+
+#footer li {
+    display: block;
+    font-size: 1.25rem;
+    margin: 15px;
+}
+
+.footerButtons {
+    border: 3px solid black;
+    border-radius: 50px;
+    display: inline-block;
+    width: 40vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#footer a {
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    color: #000000;
+    padding: calc(100% - (100% - 5px));
+    text-align: center;
+    font-family: 'Chelsea Market', cursive;
+    width: 95%;
+}
+
+
+@media only screen and (min-width: 600px) {
+.footerButtons {
+    width: 25vw;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+.footerButtons {
+    width: 15vw;
+    }
+}

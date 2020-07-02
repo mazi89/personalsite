@@ -38,7 +38,7 @@ DEBUG =  get_secret('DEBUG')
 
 RECAPTCHA_SECRET_KEY = get_secret('RECAPTCHA_SECRET_KEY')
 
-ALLOWED_HOSTS =  ['abdinasirnoor.com', '45.79.169.247', '2600:3c03::f03c:91ff:fea7:ab59', 'localhost', 'www.abdinasirnoor.com',]
+ALLOWED_HOSTS =  ['abdinasirnoor.com', '45.79.169.247', '2600:3c03::f03c:91ff:fea7:ab59', 'localhost', 'www.abdinasirnoor.com','192.168.0.2']
 
 
 # Application definition
@@ -69,7 +69,7 @@ ROOT_URLCONF = 'personalsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['personalsite/landinpage/templates/',],
+        'DIRS': ['landingpage/templates/landingpage'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -137,6 +137,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media_product')
 MEDIA_URL = '/media_product/'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static\landingpage')] # only for local testing
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'localhost'

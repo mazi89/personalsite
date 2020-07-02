@@ -13,9 +13,9 @@ import urllib.request
 import json
 
 def display_html(request):
-        query = splash_post.objects.all()
-        context = { 'splash_posts':query }
-        return render(request, 'landingpage/index.html', context)
+        # query = splash_post.objects.all()
+        # context = { 'splash_posts':query }
+        return render(request, 'landingpage/index.html')
 
 def display_blog(request):
         query = blog_post.objects.all()
