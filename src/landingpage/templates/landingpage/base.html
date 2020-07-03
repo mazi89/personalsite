@@ -93,7 +93,16 @@ _dM_     _dMM__MYMMMM9   YMMMMMM__MM__MM_  _MM_`YMMM9'Yb.MYMMMM9  _MM__MM_
 {% include "footer.html" %}                       
 <script src="{% static 'js/loader.js' %}"></script>       
 <script src="{% static 'js/header.js' %}"></script>
-<script src="{% static 'js/footer.js' %}"></script>       
+<script src="{% static 'js/footer.js' %}"></script>    
+<script>
+    // Opera mobile name positioning fix
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;      
+    let mql = window.matchMedia('only screen and (min-width: 375px) and (max-width: 425px)');
+
+    if((isOpera === true) && (mql.matches === true)){
+        document.querySelector("#name").style.marginLeft = "calc(100vw - (100vw + 60px))";
+    }
+</script>   
 </body>
 </html>
 
