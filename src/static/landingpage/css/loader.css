@@ -27,6 +27,7 @@
     text-align: center;
     z-index: 99;
     font-family: initial !important;
+    font-weight: 600;
 }
 
 /* The loader container */
