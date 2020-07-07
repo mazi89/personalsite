@@ -1,6 +1,5 @@
 import os
 import json
-import requests
 
 # Python program to demonstrate 
 # selenium 
