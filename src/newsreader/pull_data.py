@@ -2,6 +2,13 @@ import os
 import json
 import requests
 
+# Python program to demonstrate 
+# selenium 
+  
+  
+from selenium import webdriver 
+  
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 with open(os.path.join(BASE_DIR, 'secrets.json')) as secrets_file:
@@ -16,10 +23,16 @@ def get_secret(setting, secrets=secrets):
 
 main_url = get_secret('url')
 # second_url = get_secret('sec_url')
-
-response = requests.get(main_url)
-with open('main_feed/feed.xml', 'ab') as file:
-    file.write(response.content)
+option = webdriver.firefox.options.Options()
+option.headless = True
+driver = webdriver.Firefox(options = option)
+page = driver.get(main_url)
+element = driver.find_element_by_xpath("/rss/channel/item[1]").text
+print(element)
+driver.quit()
+# response = requests.get(main_url)
+# with open('main_feed/feed.xml', 'ab') as file:
+#     file.write(response.content)
 
 # response = requests.get(second_url)
 # with open('second_feed/feed.xml', 'wb') as file:
