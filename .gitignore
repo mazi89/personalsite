@@ -15,3 +15,5 @@ src/personalsite/__pycache__
 .idea/workspace.xml
 
 .idea/
+desktop.ini
+.vscode/settings.json
