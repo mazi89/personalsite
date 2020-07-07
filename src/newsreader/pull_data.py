@@ -3,9 +3,9 @@ import json
 
 # Python program to demonstrate 
 # selenium 
-  
-  
-from selenium import webdriver 
+
+
+from selenium import webdriver
   
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,10 +25,16 @@ main_url = get_secret('url')
 option = webdriver.firefox.options.Options()
 option.headless = True
 driver = webdriver.Firefox(options = option)
-page = driver.get(main_url)
-element = driver.find_element_by_xpath("/rss/channel/item[1]").text
-print(element)
+driver.get(main_url)
+element = driver.find_elements_by_xpath("/rss/channel/item")
+for el in element:
+    print("Title: \t\t",el.find_element_by_tag_name('title').text)
+    print("Description: \t\t",el.find_element_by_tag_name('description').text)
+    print("Link: \t\t",el.find_element_by_tag_name('link').text)
+    print("Date: \t\t",el.find_element_by_tag_name('pubDate').text)
+    print()
 driver.quit()
+
 # response = requests.get(main_url)
 # with open('main_feed/feed.xml', 'ab') as file:
 #     file.write(response.content)
