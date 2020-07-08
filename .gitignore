@@ -11,7 +11,8 @@ src/static/landingpage/imgs/Logo.png
 src/static/landingpage/imgs/logo.png
 src/landingapge/__pycache__
 src/personalsite/__pycache__
-
+*/*/__pycache__
+*/*/migrations/__pycache__
 .idea/workspace.xml
 
 .idea/

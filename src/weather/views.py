@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def display_html(request):
+        return render(request, 'weather/base.html')

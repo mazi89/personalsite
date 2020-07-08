@@ -52,6 +52,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'landingpage',
     'django.contrib.sessions.backends.signed_cookies',
+    'loan_calc',
+    'newsreader',
+    'weather',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +72,11 @@ ROOT_URLCONF = 'personalsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['landingpage/templates/landingpage'],
+        'DIRS': ['landingpage/templates/landingpage',
+                'loan_calc/templates/loan_calc', 
+                'newsreader/templates/newsreader',
+                'weather/templates/weather',
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
