@@ -20,7 +20,9 @@ main_url = get_secret('url')
 option = webdriver.firefox.options.Options()
 option.headless = True
 driver = webdriver.Firefox(options = option)
-driver.get(main_url)
+# driver.get(main_url)
+# driver.get("http://feeds.bbci.co.uk/news/world/rss.xml")
+driver.get("https://www.buzzfeed.com/world.xml")
 # element = driver.find_elements_by_xpath("/rss/channel/item")
 # for el in element:
 #     print("Title: \t\t",el.find_element_by_tag_name('title').text)
@@ -33,12 +35,13 @@ class Walk_through_XML:
         site_is_xml = 'xml' in driver.current_url
         if site_is_xml == False: raise Exception('XML Site not passed, please check URL')
         self.top_level_elem = driver.find_element_by_xpath('/*').tag_name
+        if self.top_level_elem == ('html' or 'HTML'): raise Exception('XML Site not passed, please check URL')
         self.root_elem = driver.find_element_by_xpath('/*/child::*').tag_name
         self.parent_elems = []
         self.child_elems = []
         self.articles= []
         self.search_for_tags = ['date','title','link','desc']
-        self.exclude = ['image', 'copyright']
+        self.exclude = ['image', 'copyright', 'language']
         
     def get_parent_elems(self):
         elem = self.root_elem
@@ -51,10 +54,19 @@ class Walk_through_XML:
                 count_dict[x] += 1
             else:
                 count_dict[x] = 1
-        ele = driver.find_elements_by_xpath(f'//{parents[8].tag_name}[1]/*')
-        print_ = [[x.tag_name, x.text] for x in ele]
-        print(count_dict)
-        # for parent in parents:
+        # ele = driver.find_elements_by_xpath(f'//{parents[2].tag_name}[1]/*')
+        # print_ = [[x.tag_name, x.text] for x in ele]
+        # print(ele)
+        # return
+        for parent in parents:
+            results = []
+            with open(os.path.join(BASE_DIR, 'newsreader/main_feed/results2_feed.txt'), 'w+') as file:
+                if count_dict[parent.tag_name] > 1 and parent.tag_name not in self.exclude:
+                    for i in range(count_dict[parent.tag_name]+1):
+                        ele = driver.find_elements_by_xpath(f'//{parent.tag_name}[{i}]/*')
+                        if ele:
+                                results.append([{f'{child.tag_name}':f'{child.text}'} for child in ele])
+                                file.write(f'{results[-1]} \n')
             # if parent.tag_name not in self.exclude:
                 # self.child_elems = children = driver.find_elements_by_xpath(f'//{parent.tag_name}/*')
                 # print(parent.tag_name)
@@ -72,7 +84,8 @@ class Walk_through_XML:
                             # print(driver.find_elements_by_xpath(f'//{child.tag_name}/*'))
                         # break
                             # articles.append({"title":child.})
-        pass
+        print("file has been written to!")
+        return 
         # return driver.find_element_by_xpath('/*').tag_name
         
     def get_child_elems(self):
@@ -99,3 +112,5 @@ print('*'*100)
 # parent = driver.find_elements_by_xpath(f'//{.tag_name}/parent::*') 
 # print()
 driver.quit()
+
+
