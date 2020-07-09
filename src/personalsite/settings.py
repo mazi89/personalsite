@@ -38,7 +38,7 @@ DEBUG =  get_secret('DEBUG')
 
 RECAPTCHA_SECRET_KEY = get_secret('RECAPTCHA_SECRET_KEY')
 
-ALLOWED_HOSTS =  ['abdinasirnoor.com', '45.79.169.247', '2600:3c03::f03c:91ff:fea7:ab59', 'localhost', 'www.abdinasirnoor.com',]
+ALLOWED_HOSTS =  ['abdinasirnoor.com', '45.79.169.247', '2600:3c03::f03c:91ff:fea7:ab59', 'localhost', 'www.abdinasirnoor.com','192.168.0.2']
 
 
 # Application definition
@@ -52,6 +52,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'landingpage',
     'django.contrib.sessions.backends.signed_cookies',
+    'loan_calc',
+    'newsreader',
+    'weather',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +72,11 @@ ROOT_URLCONF = 'personalsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['personalsite/landinpage/templates/',],
+        'DIRS': ['landingpage/templates/landingpage',
+                'loan_calc/templates/loan_calc', 
+                'newsreader/templates/newsreader',
+                'weather/templates/weather',
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -137,6 +144,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media_product')
 MEDIA_URL = '/media_product/'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static\landingpage')] # only for local testing
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'localhost'
@@ -144,4 +152,6 @@ EMAIL_PORT = 25
 EMAIL_HOST_USER = 'abdinasir'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
+# EMAIL_SSL_CERTFILE = '/etc/letsencrypt/live/abdinasirnoor.com-0001/cert.pem'
+# EMAIL_SSL_KEYFILE = '/etc/letsencrypt/live/abdinasirnoor.com-0001/privkey.pem'
 DEFAULT_FROM_EMAIL = 'Abdinasir <Abdinasir@abdinasirnoor.com>'

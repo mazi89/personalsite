@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 mysqlclient = "*"
 pillow = "*"
+selenium = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"

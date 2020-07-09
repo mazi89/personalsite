@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdinasir Noor | Project | Loan Calc</title>
+</head>
+<body>
+    <p>Please enter the principle loan amount: <input type="number" name="principle" id=""></p>
+    <p>Please enter the loan APR (Annual Percentage Rate): <input type="number" name="apr" id=""></p>
+    <p>Please enter the loan term length (leave blank to 
+        estimate monthly payments): <input type="number" name="term" id=""></p>
+    <input type="button" value="calculate">
+    <script src="{% static 'loan_calc/js/index.js' %}"></script>    
+</body>
+</html>

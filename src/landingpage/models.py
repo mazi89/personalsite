@@ -9,7 +9,7 @@ from django.db.models import F
 from django.core.mail import send_mail
 
 from decimal import *
-import os
+import os, datetime
 
 class splash_post(models.Model):
         splash_heading = models.CharField(max_length=512)
@@ -132,12 +132,40 @@ class Reply(models.Model):
 
     def __str__(self):
         return str(self.email.email_field)
-@receiver(post_save, sender=Reply)
-def send_reply_mail(sender, instance, **kwargs):
-    contact_init = contact_me.objects.filter(id=instance.email.id)
-    email_address = contact_init.values_list('email_field',flat=True).first()
-    subject = 'RE: abdinasirnoor.com'
-    body = instance.message
+
+class Email(models.Model):
+    email_to = models.EmailField(max_length=254)
+    subject_field = models.CharField(max_length=256)
+    message_body = models.TextField()
+    date_sent = models.DateTimeField(auto_now_add=True)
+    replied = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.email_to)
+
+class Inbox(models.Model):
+    message_id = models.CharField(max_length=250,unique=True)
+    delivered_to = models.EmailField(max_length=254)
+    email_from = models.EmailField(max_length=254)
+    subject_field = models.CharField(max_length=256)
+    message_body = models.TextField()
+    date_received = models.DateTimeField(auto_now_add=True)
+    original_date = models.DateTimeField()
+
+    def __str__(self):
+        return str(self.subject_field)
+
+    class Meta:
+        verbose_name = 'Inbox Email'
+        verbose_name_plural = 'Inbox Emails'
+        ordering = ('original_date',)
+
+
+@receiver(post_save, sender=Email)
+def send_email(sender, instance, **kwargs):
+    email_address = instance.email_to
+    subject = instance.subject_field
+    body = instance.message_body
     origin_address = 'Abdinasir@abdinasirnoor.com'
     replied = instance.replied
     replied = True
@@ -148,6 +176,40 @@ def send_reply_mail(sender, instance, **kwargs):
                 [email_address],
                 fail_silently=False,
             )
+
+@receiver(post_save, sender=Inbox)
+def send_notification(sender, instance, **kwargs):
+    subject = 'New Email received'
+    tm = instance.date_received
+    tm = datetime.datetime.strftime(tm, "%c")
+    body = "date: " + tm + " email from: " + instance.email_from + " subject: " + instance.subject_field + " message: " + instance.message_body
+    origin_address = 'abdinasir@abdinasirnoor.com'
+    send_mail(
+                subject,
+                ''.join(body),
+                origin_address,
+                ['abdinasirnoor@outlook.com',],
+                fail_silently=False,
+            )
+
+@receiver(post_save, sender=Reply)
+def send_reply_mail(sender, instance, **kwargs):
+    contact_init = contact_me.objects.filter(id=instance.email.id)
+    email_address = contact_init.values_list('email_field',flat=True).first()
+    subject = 'RE: abdinasirnoor.com'
+    body = instance.message
+    origin_address = 'abdinasir@abdinasirnoor.com'
+    replied = instance.replied
+    replied = True
+    send_mail(
+                subject,
+                body,
+                origin_address,
+                [email_address],
+                fail_silently=False,
+            )
+
+
 @receiver(post_save, sender=Add_to_cart)
 def update_cart(sender, instance, **kwargs):
     with transaction.atomic():
