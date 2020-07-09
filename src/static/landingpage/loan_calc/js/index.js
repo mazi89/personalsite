@@ -3,9 +3,9 @@ function convert_two_spots(number){
 }
 // Amortized loan
 // Payment = Amount / Discount Facor
-// D = {[(1 + r)n] - 1}/[r(1 + r)n]
 // n = # of payments per year * loan term length
 // r = APR/n
+// D = {[(1 + r)n] - 1}/[r(1 + r)n]
 // example: loan of 10k at 3% for 7 years
 // n = 84 (12 monthly payments/year * 7 years)
 // r = 0.0025 (0.03/by 12 payments per year)
