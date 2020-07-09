@@ -7,9 +7,12 @@ from selenium import webdriver
 #     lines = [file.readline() for line in range(7)] # get the first 7 links
 #     file.close()
 # print(lines)
-
+option = webdriver.firefox.options.Options()
+option.headless = True
+driver = webdriver.Firefox(options = option)
 class navigate_main_url:
     def __init__(self, link):
+        driver.get(link)
     
 
 #desktopcontrol1_newsdesktop3_lblcontent
