@@ -2443,3 +2443,452 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't fin
 1594270249470	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 1594270252085	Marionette	INFO	Stopped listening on port 64111
+1594277560992	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilePiKOwh"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594277568066	Marionette	INFO	Listening on port 65450
+1594277568323	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39012F,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 48260, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1594277594418	Marionette	INFO	Stopped listening on port 65450
+1594277604976	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileBHUg5o"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594277607662	Marionette	INFO	Listening on port 65510
+1594277608090	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileltMDw6"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594277639155	Marionette	INFO	Listening on port 49185
+1594277639177	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileanJVD0"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594277665696	Marionette	INFO	Listening on port 49238
+1594277665824	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594277669019	Marionette	INFO	Stopped listening on port 49238
+1594278066375	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofile7fVWCI"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278068826	Marionette	INFO	Listening on port 49373
+1594278068985	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278072526	Marionette	INFO	Stopped listening on port 49373
+1594278203091	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofile5Rc6eS"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278205503	Marionette	INFO	Listening on port 49448
+1594278205702	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278208857	Marionette	INFO	Stopped listening on port 49448
+1594278255906	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileaGUmed"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278258210	Marionette	INFO	Listening on port 49508
+1594278258519	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278261791	Marionette	INFO	Stopped listening on port 49508
+1594278278968	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileFyBeup"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278281402	Marionette	INFO	Listening on port 49563
+1594278281579	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278284833	Marionette	INFO	Stopped listening on port 49563
+1594278315029	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilerEHC36"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278317331	Marionette	INFO	Listening on port 49620
+1594278317637	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278321199	Marionette	INFO	Stopped listening on port 49620
+1594278431522	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofiley34B6w"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278434215	Marionette	INFO	Listening on port 49691
+1594278434635	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594278436871	Marionette	INFO	Stopped listening on port 49691
+1594279282718	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilerv5dBO"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594279285380	Marionette	INFO	Listening on port 50223
+1594279285839	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-fc59ff189e300e923f562236c8b1dec9, line 1: SyntaxError: unexpected token: ':'
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+Exiting due to channel error.
+eveloper Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilehDg9wn"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594279323584	Marionette	INFO	Listening on port 54430
+1594279323685	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-bcb83397950f6168df3c626926d05859, line 1: SyntaxError: unexpected token: ':'
+1594279329313	Marionette	INFO	Stopped listening on port 54430
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/r20200707/r20190131/show_ads_impl_fy2019.js, line 40: uncaught exception: undefined
+1594280136867	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileAHO9qi"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594280139954	Marionette	INFO	Listening on port 55202
+1594280140055	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-5281687b8a1c8c71d5191b83ca26608c, line 1: SyntaxError: unexpected token: ':'
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 32688, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1594284545969	Marionette	INFO	Stopped listening on port 55202
+less mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594281101224	Marionette	INFO	Listening on port 56226
+1594281101295	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-93eda13b22c00828c8ea2b43be8f75c3, line 1: SyntaxError: unexpected token: ':'
+1594281107800	Marionette	INFO	Stopped listening on port 56226
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/r20200706/r20190131/show_ads_impl_fy2019.js, line 40: uncaught exception: undefined
+1594282443365	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofile4obfCd"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594282447781	Marionette	INFO	Listening on port 57235
+1594282448146	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-d40e4967f7fb1f29dbacad9409b47493, line 1: SyntaxError: unexpected token: ':'
+JavaScript error: https://vd.vidoplay.com/v2v-node/sas/20200605_6003c2b2de39032ea131b3f5c1977b87c8e63aa4/wbk/v2v_e_c_bundle.js, line 1: SyntaxError: The URI is malformed.
+JavaScript error: https://vd.vidoplay.com/v2v-node/sas/20200605_6003c2b2de39032ea131b3f5c1977b87c8e63aa4/wbk/v2v_e_c_bundle.js, line 1: SyntaxError: The URI is malformed.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 47808, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+[Parent 47808, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1594284547286	Marionette	INFO	Stopped listening on port 57235
+5	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-cb4a4bee8ec9d607c8c75c18c1eb6bdb, line 1: SyntaxError: unexpected token: ':'
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 48068, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+[Parent 48068, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1594284557203	Marionette	INFO	Stopped listening on port 57784
+0	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-bd79919fe12e101474eaabfcc0faba58, line 1: SyntaxError: unexpected token: ':'
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileMDZ0hZ"
+*** You are running in headless mode.
+1594282674421	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\f1594282675249	Marionette	INFO	Listening on port 58512
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39012F,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 18976, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+[Parent 18976, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1594284544508	Marionette	INFO	Stopped listening on port 58512
+ on port 58562
+JavaScript error: https://vidstat.taboola.com/lite-unit/2.0.8/UnitFeedManagerDesktop.min.js, line 1: TypeError: this.win.startCMTagMain is not a function
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/r20200706/r20190131/show_ads_impl_fy2019.js, line 40: uncaught exception: undefined
+1594283425587	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileh74k2m"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594283433626	Marionette	INFO	Listening on port 59525
+1594283433936	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-53b106e05c34e96e78efea4b05ab8ef6, line 1: SyntaxError: unexpected token: ':'
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39012F,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 35340, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1594284542717	Marionette	INFO	Stopped listening on port 59525
+408	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-8e9adc54988dfda8773cb7995e4c9539, line 1: SyntaxError: unexpected token: ':'
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39012F,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 37408, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1594284540995	Marionette	INFO	Stopped listening on port 59890
+762	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-2e78ca8e675314bff8f5658740c1d1b5, line 1: SyntaxError: unexpected token: ':'
+1594283997330	Marionette	INFO	Stopped listening on port 60863
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3900AC,name=PContent::Msg_StartVisitedQueries) Channel closing: too late to send/recv, messages will be lost
+
+1594284306925	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofile1wnQxS"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594284315575	Marionette	INFO	Listening on port 61448
+1594284315849	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-9340a9edbf002369a420d76a838489b5, line 1: SyntaxError: unexpected token: ':'
+1594284323755	Marionette	INFO	Stopped listening on port 61448
+1594284482846	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilegidZAa"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594284488464	Marionette	INFO	Listening on port 61778
+1594284488485	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-1a3a05b6396147b870fbbed52cb498b5, line 1: SyntaxError: unexpected token: ':'
+1594284497597	Marionette	INFO	Stopped listening on port 61778
+1594284575268	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileppz80Y"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594284578030	Marionette	INFO	Listening on port 62120
+1594284578378	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20200707/r20110914/elements/html/paloma_fy2019.js, line 12: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-41b28792292e71cc0305e73c50ca895a, line 1: SyntaxError: unexpected token: ':'
+1594284587944	Marionette	INFO	Stopped listening on port 62120
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5A000D,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+1594284634908	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileZm52iN"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594284637798	Marionette	INFO	Listening on port 62407
+1594284638021	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-e1562fccf1c593aea0a1b6905ab6e80c, line 1: SyntaxError: unexpected token: ':'
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 38040, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1594284657438	Marionette	INFO	Stopped listening on port 62407
+1594284664902	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilew7Etu4"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594284668450	Marionette	INFO	Listening on port 62721
+1594284668531	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-b878aab3f0110b398343b92a0475fdfe, line 1: SyntaxError: unexpected token: ':'
+1594284677893	Marionette	INFO	Stopped listening on port 62721
+1594284860765	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileJhkA9e"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594284863906	Marionette	INFO	Listening on port 63098
+1594284864379	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-16fbae3ced9575fee4721cdf192069ac, line 1: SyntaxError: unexpected token: ':'
+1594284879140	Marionette	INFO	Stopped listening on port 63098
+1594284941167	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileF70S7v"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594284943683	Marionette	INFO	Listening on port 63442
+1594284943807	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-de2710fde3974f72aad7831bffae7cdc, line 1: SyntaxError: unexpected token: ':'
+JavaScript warning: https://z.moatads.com/taboolajsvideo2446883476/moatvideo.js#_moatApi63173093, line 272: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/taboolajsvideo2446883476/moatvideo.js#_moatApi63173093, line 272: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/taboolajsvideo2446883476/moatvideo.js#_moatApi63173093, line 272: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/taboolajsvideo2446883476/moatvideo.js#_moatApi63173093, line 272: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1594284958330	Marionette	INFO	Stopped listening on port 63442
+1594285013002	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilesMSaoG"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594285015503	Marionette	INFO	Listening on port 63874
+1594285015620	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-2497d0fe045657fafcdc565c2cc0c5a5, line 1: SyntaxError: unexpected token: ':'
+1594285040675	Marionette	INFO	Stopped listening on port 63874
+1594285143902	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileaWUuig"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594285146500	Marionette	INFO	Listening on port 64346
+1594285146522	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-8e1b3fb02395742529e31fa64f41cb90, line 1: SyntaxError: unexpected token: ':'
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 14216, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1594285285812	Marionette	INFO	Stopped listening on port 64346
+less mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594285226085	Marionette	INFO	Listening on port 64709
+1594285226228	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-13b85f294b6c8edc4670c97d125c4a79, line 1: SyntaxError: unexpected token: ':'
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39012F,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 24428, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1594285293131	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofile27C3Rz"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594285295888	Marionette	INFO	Listening on port 65102
+1594285296246	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-cca2c3a77beb292165242b1d51dbd6bc, line 1: SyntaxError: unexpected token: ':'
+JavaScript warning: https://z.moatads.com/taboolajsvideo2446883476/moatvideo.js#_moatApi81246267, line 272: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/taboolajsvideo2446883476/moatvideo.js#_moatApi81246267, line 272: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/taboolajsvideo2446883476/moatvideo.js#_moatApi81246267, line 272: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/taboolajsvideo2446883476/moatvideo.js#_moatApi81246267, line 272: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39012F,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 148, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1594285798542	Marionette	INFO	Stopped listening on port 65102
+83	Marionette	INFO	Listening on port 49157
+1594285401318	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-49c621554623673f78b7a77bd1516644, line 1: SyntaxError: unexpected token: ':'
+1594285417426	Marionette	INFO	Stopped listening on port 49157
+1594285434378	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileFzUjsA"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594285437097	Marionette	INFO	Listening on port 49483
+1594285437491	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-11ca0c4f295702199fd8993d1d163ccd, line 1: SyntaxError: unexpected token: ':'
+1594285460240	Marionette	INFO	Stopped listening on port 49483
+1594285703622	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileSPH4tu"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594285706428	Marionette	INFO	Listening on port 49999
+1594285706743	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-80027866c03c2f39765f8fbf4d5280f3, line 1: SyntaxError: unexpected token: ':'
+1594285715511	Marionette	INFO	Stopped listening on port 49999
+1594285721105	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileYGjilO"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594285724243	Marionette	INFO	Listening on port 50248
+1594285724728	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-ef60fb55709ce6f71f60dc4dc3546d31, line 1: SyntaxError: unexpected token: ':'
+1594285731302	Marionette	INFO	Stopped listening on port 50248
+1594285805614	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilePY9tG6"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594285808093	Marionette	INFO	Listening on port 50536
+1594285808224	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-23c7fbc49dbdee5ce969f9e938db6f2e, line 1: SyntaxError: unexpected token: ':'
+1594285815335	Marionette	INFO	Stopped listening on port 50536
+[Child 38944, Chrome_ChildThread] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 522
+[Child 38944, Chrome_ChildThread] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 522
+1594285820496	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofile6Kjtpl"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594285823482	Marionette	INFO	Listening on port 50795
+1594285823609	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-04232d2b6c46ee1084b35b8d8dd98b91, line 1: SyntaxError: unexpected token: ':'
+1594285831168	Marionette	INFO	Stopped listening on port 50795
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_0/infra/cmTagFEED_MANAGER.js, line 9: NS_ERROR_UNEXPECTED: 
+1594286013696	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileeOl0BS"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286016336	Marionette	INFO	Listening on port 51140
+1594286016817	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286018864	Marionette	INFO	Stopped listening on port 51140
+1594286029388	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileiZODik"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286031988	Marionette	INFO	Listening on port 51204
+1594286032003	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-8d4de46dcde0c2601e9d6ff9fdc2cf26, line 1: SyntaxError: unexpected token: ':'
+1594286039149	Marionette	INFO	Stopped listening on port 51204
+1594286043884	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileWskcan"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286046072	Marionette	INFO	Listening on port 51450
+1594286046505	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-f12b03ee967af49c8b8d90d3f04d97ec, line 1: SyntaxError: unexpected token: ':'
+1594286052138	Marionette	INFO	Stopped listening on port 51450
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_0/infra/cmTagFEED_MANAGER.js, line 13: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1594286117882	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilee0zA0A"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286120407	Marionette	INFO	Listening on port 51746
+1594286120507	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-8a41397b62d0b1fab90a8cd1bb16e4fc, line 1: SyntaxError: unexpected token: ':'
+1594286127910	Marionette	INFO	Stopped listening on port 51746
+JavaScript error: https://vidstat.taboola.com/vpaid/vPlayer/player/v11.4.2/OvaMediaPlayer.js, line 25: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1594286133218	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilefQzol1"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286134889	Marionette	INFO	Listening on port 52017
+1594286135246	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-cd16d12b6183f332867e289e36d8ec4a, line 1: SyntaxError: unexpected token: ':'
+1594286141210	Marionette	INFO	Stopped listening on port 52017
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_0/infra/cmTagFEED_MANAGER.js, line 13: NS_ERROR_NOT_INITIALIZED: 
+1594286208977	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileEZWhx4"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286211382	Marionette	INFO	Listening on port 52312
+1594286211588	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-a186c54b83e0698a08de919b791be0a0, line 1: SyntaxError: unexpected token: ':'
+1594286219230	Marionette	INFO	Stopped listening on port 52312
+1594286223791	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileMvI79D"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286226167	Marionette	INFO	Listening on port 52578
+1594286226405	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-1ead04d31536d41e2a638f11e387e82c, line 1: SyntaxError: unexpected token: ':'
+1594286237050	Marionette	INFO	Stopped listening on port 52578
+1594286531188	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileYdvCbh"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286533691	Marionette	INFO	Listening on port 53024
+1594286533837	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-1ba9e2dbdac5bf1935c3c34a9d791e12, line 1: SyntaxError: unexpected token: ':'
+1594286540817	Marionette	INFO	Stopped listening on port 53024
+1594286545374	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilewDnSv2"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286548311	Marionette	INFO	Listening on port 53280
+1594286548484	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-c78a0a144222ab1bd252c2ff091ac8aa, line 1: SyntaxError: unexpected token: ':'
+1594286555092	Marionette	INFO	Stopped listening on port 53280
+1594286627454	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileEJKCrg"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286629877	Marionette	INFO	Listening on port 53577
+1594286630069	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-4384af4b05a571207bff33cc50d25eb4, line 1: SyntaxError: unexpected token: ':'
+1594286637080	Marionette	INFO	Stopped listening on port 53577
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1594286642791	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileBqv8c4"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286645263	Marionette	INFO	Listening on port 53846
+1594286645404	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-a6352f13bfc53884e6dc89621e7c704d, line 1: SyntaxError: unexpected token: ':'
+1594286651891	Marionette	INFO	Stopped listening on port 53846
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5A000D,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1594286695266	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileW3d2Q6"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286697516	Marionette	INFO	Listening on port 54126
+1594286697882	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-054593479d34aab3e5906cb5b051ccc3, line 1: SyntaxError: unexpected token: ':'
+1594286704551	Marionette	INFO	Stopped listening on port 54126
+1594286710710	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofilenDzF4F"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594286713334	Marionette	INFO	Listening on port 54382
+1594286713832	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-e283ded95926e1948838dc7c73ec6dd3, line 1: SyntaxError: unexpected token: ':'
+1594286720886	Marionette	INFO	Stopped listening on port 54382
+JavaScript error: https://vidstat.taboola.com/lite-unit/2.0.8/UnitFeedManagerDesktop.min.js, line 1: TypeError: this.win.startCMTagMain is not a function
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1594287218376	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ABDINA~1\\AppData\\Local\\Temp\\rust_mozprofileFNvQ3w"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594287221640	Marionette	INFO	Listening on port 56108
+1594287221996	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594287224151	Marionette	INFO	Stopped listening on port 56108
