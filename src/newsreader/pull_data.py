@@ -25,10 +25,11 @@ driver = webdriver.Firefox(options = option)
 # driver.get(main_url)
 # driver.get("http://feeds.bbci.co.uk/news/world/rss.xml") ! not a legit XML site
 # driver.get("https://www.buzzfeed.com/world.xml")
-driver.get("https://feeds.npr.org/1001/rss.xml")
+# driver.get("https://feeds.npr.org/1001/rss.xml")
 
 class Walk_through_XML:
-    def __init__(self):
+    def __init__(self, link):
+        driver.get(link)
         site_is_xml = 'xml' in driver.current_url
         if site_is_xml == False: raise Exception('XML Site not passed, please check URL')
         self.top_level_elem = driver.find_element_by_xpath('/*').tag_name
@@ -71,9 +72,22 @@ class Walk_through_XML:
         print("file has been written to!")
         return         
 
+class Walk_through_HTML:
+    def __init__(self, link):
+        driver.get(link)
+        self.top_level_elem = driver.find_element_by_xpath('/*').tag_name
+        if self.top_level_elem != ('html' or 'HTML'): raise Exception('HTML Site not passed, please check URL')
+        self.root_elem = driver.find_element_by_xpath('/*/child::*').tag_name
+        self.links = []
+        self.get_article_links()
+    
+    def get_article_links(self):
+        print()
+        
 print('*'*100)
 
-Walk_through_XML().get_elems()
+# Walk_through_XML().get_elems()
+# Walk_through_HTML('https://www.dayniiile.com/category/world-news/')
 
 print('*'*100)
 
