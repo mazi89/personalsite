@@ -31,27 +31,25 @@ class navigate_main_url:
         eval(f'self.{methods[self.method_to_call]}()')
 
     def hiiraan(self):
-        ''' assumption is article links are scrapped from rss feed'''
+        ''' assumption is article links are scrapped from rss feed '''
         content = self.driver.find_elements_by_xpath('//*[@id="desktopcontrol1_newsdesktop3_lblcontent"]/*')
         self.article_data = [{f'{x.tag_name}:{x.text}'} for x in content if x.text]
         self.tear_down()
-        return self.article_data
     
     def dayniiile(self):
-        ''' assumption, article links need to be scarpped from homepage first'''
+        ''' assumption, article links need to be scraped from homepage first '''
         if self.article_links:
             for link in self.article_links:
                 self.driver.get(link)
                 self.dayniiile_article_data()
-                break
         else:
-            links = self.driver.find_elements_by_xpath('//*[@id="td-outer-wrap"]/div[3]/div/div/div//a')
+            links = self.driver.find_elements_by_xpath("//div[contains(concat(' ', normalize-space(@class), ' '), ' td-big-grid-post ')]//a")
             self.article_links = list(set([link.get_attribute('href') for link in links if (link.get_attribute('href') != self.site and self.top_home_site) and (link.get_attribute('href') != 'https://www.dayniiile.com/author/admin/')]))
             for link in self.article_links:
                 self.driver.get(link)
                 self.dayniiile_article_data(link)
         self.tear_down()
-        return
+        
     def dayniiile_article_data(self, link):
         ''' assumption is driver is located on an article within the webpage '''
         try:
@@ -71,12 +69,10 @@ class navigate_main_url:
             self.article_data.append([article_data])
         else: 
             self.article_data = [article_data]
-        return
 
     def tear_down(self):
         self.driver.close()
         self.driver.quit()
-        return
 
 articles = {}    
 with open(os.path.join(BASE_DIR, 'newsreader/main_feed/articles/dayniiile.txt'), 'w+') as file:
